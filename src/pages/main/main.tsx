@@ -1,3 +1,5 @@
+import OfferCard from '../../components/offer-card/offer-card';
+
 function Main(): JSX.Element {
   return (
     <main className="page__main page__main--index">
@@ -59,7 +61,56 @@ function Main(): JSX.Element {
               </ul>
             </form>
             <div className="cities__places-list places__list tabs__content">
-              <article className="cities__card place-card">
+              <OfferCard
+                isBookmarked={false}
+                name='Beautiful &amp; luxurious apartment at great location'
+                isPremium
+                src='img/apartment-01.jpg'
+                price={120}
+                text='night'
+                type='Apartment'
+              />
+
+              <OfferCard
+                isBookmarked
+                name='Wood and stone place'
+                isPremium
+                src='img/room.jpg'
+                price={80}
+                text='night'
+                type='Room'
+              />
+
+              <OfferCard
+                isBookmarked={false}
+                name='Canal View Prinsengracht'
+                isPremium={false}
+                src='img/apartment-02.jpg'
+                price={132}
+                text='night'
+                type='Apartment'
+              />
+
+              <OfferCard
+                isBookmarked={false}
+                name='Nice, cozy, warm big bed apartment'
+                isPremium
+                src='img/apartment-03.jpg'
+                price={180}
+                text='night'
+                type='Apartment'
+              />
+
+              <OfferCard
+                isBookmarked
+                name='Wood and stone place'
+                isPremium={false}
+                src='img/room.jpg'
+                price={80}
+                text='night'
+                type='Room'
+              />
+              {/* <article className="cities__card place-card">
                 <div className="place-card__mark">
                   <span>Premium</span>
                 </div>
@@ -92,9 +143,9 @@ function Main(): JSX.Element {
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
-              </article>
+              </article> */}
 
-              <article className="cities__card place-card">
+              {/* <article className="cities__card place-card">
                 <div className="cities__image-wrapper place-card__image-wrapper">
                   <a href="#">
                     <img className="place-card__image" src="img/room.jpg" width="260" height="200" alt="Place image" />
@@ -124,9 +175,9 @@ function Main(): JSX.Element {
                   </h2>
                   <p className="place-card__type">Room</p>
                 </div>
-              </article>
+              </article> */}
 
-              <article className="cities__card place-card">
+              {/* <article className="cities__card place-card">
                 <div className="cities__image-wrapper place-card__image-wrapper">
                   <a href="#">
                     <img className="place-card__image" src="img/apartment-02.jpg" width="260" height="200" alt="Place image" />
@@ -156,9 +207,9 @@ function Main(): JSX.Element {
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
-              </article>
+              </article> */}
 
-              <article className="cities__card place-card">
+              {/* <article className="cities__card place-card">
                 <div className="place-card__mark">
                   <span>Premium</span>
                 </div>
@@ -191,9 +242,9 @@ function Main(): JSX.Element {
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
-              </article>
+              </article> */}
 
-              <article className="cities__card place-card">
+              {/* <article className="cities__card place-card">
                 <div className="cities__image-wrapper place-card__image-wrapper">
                   <a href="#">
                     <img className="place-card__image" src="img/room.jpg" width="260" height="200" alt="Place image" />
@@ -223,7 +274,7 @@ function Main(): JSX.Element {
                   </h2>
                   <p className="place-card__type">Room</p>
                 </div>
-              </article>
+              </article> */}
             </div>
           </section>
           <div className="cities__right-section">
