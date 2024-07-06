@@ -1,12 +1,12 @@
 import Main from '../../pages/main/main';
 
-type AppScreenProps = {
+type AppProps = {
   placesToStay: number;
 }
 
-function App({ placesToStay }: AppScreenProps) {
+function App({ placesToStay }: AppProps) {
   return (
-    <Main placesToStay={placesToStay} />
+    <Main places={placesToStay} />
   );
 }
 
