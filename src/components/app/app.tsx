@@ -1,12 +1,8 @@
-import Main from '../../pages/main/main';
+import { MainProps, Main } from '../../pages/main/main';
 
-type AppProps = {
-  placesToStay: number;
-}
-
-function App({ placesToStay }: AppProps) {
+function App({ places }: MainProps) {
   return (
-    <Main places={placesToStay} />
+    <Main places={places} />
   );
 }
 

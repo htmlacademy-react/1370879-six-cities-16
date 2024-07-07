@@ -1,10 +1,10 @@
 import OfferCard from '../../components/offer-card/offer-card';
 
-type MainProps = {
+export type MainProps = {
   places: number;
 }
 
-function Main({ places }: MainProps): JSX.Element {
+export function Main({ places }: MainProps) {
   return (
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
@@ -119,5 +119,3 @@ function Main({ places }: MainProps): JSX.Element {
     </main>
   );
 }
-
-export default Main;
