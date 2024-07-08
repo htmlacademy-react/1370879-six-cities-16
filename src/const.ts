@@ -1,3 +1,6 @@
-export const Settings = {
-  ErrorCount: 3
-};
+export enum AppRoutes {
+  Main = '/',
+  Login = '/login',
+  Favorites = '/favorites',
+  Offer = '/offer/:id'
+}
