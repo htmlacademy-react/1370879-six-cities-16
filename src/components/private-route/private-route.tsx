@@ -6,8 +6,7 @@ type PrivateRouteProps = {
   children: JSX.Element;
 }
 
-function PrivateRoute(props: PrivateRouteProps) {
-  const { authorizationStatus, children } = props;
+function PrivateRoute({ authorizationStatus, children }: PrivateRouteProps) {
   return (
     // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
     authorizationStatus === AuthorizationStatus.Auth

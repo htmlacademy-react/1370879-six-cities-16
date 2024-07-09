@@ -44,8 +44,6 @@ export function Main({ places }: MainProps) {
             <div className="cities__right-section">
               <section className="cities__map map"></section>
             </div>
-
-            {/* {(): void => console.log(nanoid)} */}
           </div>
         </div>
       </main>
