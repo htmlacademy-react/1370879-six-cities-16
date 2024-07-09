@@ -1,3 +1,4 @@
+import { nanoid } from '@reduxjs/toolkit';
 import Header from '../../components/header/header';
 import LocationList from '../../components/location-list/location-list';
 import OfferCard from '../../components/offer-card/offer-card';
@@ -28,7 +29,6 @@ export function Main({ places }: MainProps) {
               <Sorting />
               <div className="cities__places-list places__list tabs__content">
                 {Array.from({ length: OFFER_CARD_COUNT }).map(() => (
-                  // eslint-disable-next-line react/jsx-key
                   <OfferCard
                     isFavorite={false}
                     name='Beautiful &amp; luxurious apartment at great location'
@@ -36,7 +36,7 @@ export function Main({ places }: MainProps) {
                     src='img/apartment-01.jpg'
                     price={120}
                     type='Apartment'
-                  // key={index}
+                    key={nanoid(10)}
                   />
                 ))}
               </div>
@@ -44,6 +44,8 @@ export function Main({ places }: MainProps) {
             <div className="cities__right-section">
               <section className="cities__map map"></section>
             </div>
+
+            {/* {(): void => console.log(nanoid)} */}
           </div>
         </div>
       </main>
