@@ -1,15 +1,11 @@
 import { Link } from 'react-router-dom';
+import style from './style.module.css';
 
 const Page404 = () => (
-  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '1rem' , height: '100vh'}}>
-    <p style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '24px' }}>404 Not Found</p>
+  <div className={style.root}>
+    <p className={style.root__text}>404 Not Found</p>
     <Link
-      style={{
-        display: 'block',
-        textAlign: 'center',
-        fontWeight: 'bold',
-        fontSize: '24px',
-      }}
+      className={style.root__link}
       to="/"
     >
         Back to main page

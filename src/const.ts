@@ -1,6 +1,8 @@
 export const CITIES = ['Paris', 'Cologne', 'Brussels', 'Amsterdam', 'Hamburg', 'Dusseldorf'] as const;
 
-export enum AppRoutes {
+export const placesCount: number = 312;
+
+export enum AppRoute {
   Main = '/',
   Login = '/login',
   Favorites = '/favorites',
