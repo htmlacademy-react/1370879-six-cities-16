@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { AppRoutes, AuthorizationStatus } from '../../const';
+import { AppRoute, AuthorizationStatus } from '../../const';
 
 type PrivateRouteProps = {
   authorizationStatus: string;
@@ -11,7 +11,7 @@ function PrivateRoute({ authorizationStatus, children }: PrivateRouteProps) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
     authorizationStatus === AuthorizationStatus.Auth
       ? children
-      : <Navigate to={AppRoutes.Login}/>
+      : <Navigate to={AppRoute.Login}/>
   );
 }
 
