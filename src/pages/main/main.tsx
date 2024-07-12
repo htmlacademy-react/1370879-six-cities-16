@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { nanoid } from '@reduxjs/toolkit';
 import Header from '../../components/header/header';
 import LocationList from '../../components/location-list/location-list';
@@ -13,6 +14,9 @@ export type MainProps = {
 export function Main({ places }: MainProps) {
   return (
     <>
+      <Helmet>
+        <title>Главная страница предложения Шесть Городов</title>
+      </Helmet>
       <Header/>
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
