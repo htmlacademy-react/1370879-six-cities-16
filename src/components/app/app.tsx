@@ -6,7 +6,10 @@ import Offer from '../../pages/offer/offer';
 import Page404 from '../../pages/page-404/page-404';
 import { PrivateRoute, PublicRoute } from '../access-route/access-route';
 import { MainProps, Main } from '../../pages/main/main';
-import { AppRoute, AuthorizationStatus } from '../../const';
+import { AppRoute } from '../../const';
+import { AuthStatus } from '../../types/auth-status';
+
+const currentStatus: AuthStatus = 'NoAuth';
 
 function App({ places }: MainProps) {
   return (
@@ -15,13 +18,13 @@ function App({ places }: MainProps) {
         <Routes>
           <Route path={AppRoute.Main} element={<Main places={places} />} />
           <Route path={AppRoute.Login} element={
-            <PublicRoute status={AuthorizationStatus.Auth}>
+            <PublicRoute status={currentStatus}>
               <Login />
             </PublicRoute>
           }
           />
           <Route path={AppRoute.Favorites} element={
-            <PrivateRoute status={AuthorizationStatus.NoAuth}>
+            <PrivateRoute status={currentStatus}>
               <Favorites />
             </PrivateRoute>
           }
