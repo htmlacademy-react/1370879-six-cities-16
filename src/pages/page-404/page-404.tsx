@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import style from './style.module.css';
+import Counter from '../../components/counter/counter';
 
 const Page404 = () => (
   <>
@@ -17,6 +18,8 @@ const Page404 = () => (
         Back to main page
       </Link>
     </main>
+
+    <Counter/>
   </>
 );
 
