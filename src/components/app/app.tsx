@@ -9,7 +9,7 @@ import { MainProps, Main } from '../../pages/main/main';
 import { AppRoute } from '../../const';
 import { AuthStatus } from '../../types/auth-status';
 
-const currentStatus: AuthStatus = 'NoAuth';
+const currentStatus: AuthStatus = 'Auth';
 
 function App({ places }: MainProps) {
   return (

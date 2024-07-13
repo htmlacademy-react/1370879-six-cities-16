@@ -8,9 +8,26 @@ interface AccessRouterProps {
   status: AuthStatus;
 }
 
-const createAccessRouter = (statusToCheck: AuthStatus, fallbackPath: AppRoute) => function AccessRoute({ children, status }: AccessRouterProps) {
-  return status === statusToCheck ? children : <Navigate to={fallbackPath} />;
-};
+const createAccessRouter = (statusToCheck: AuthStatus, fallbackPath: AppRoute) =>
+  function AccessRoute({ children, status }: AccessRouterProps) {
+    // if (status === 'Unknown') {
+    //   return 'Loading...';
+    // }
+
+    // if (status === statusToCheck) {
+    //   return children;
+    // }
+
+    // return <Navigate to={fallbackPath} />;
+    switch (status) {
+      case statusToCheck:
+        return children;
+      case 'Unknown':
+        return 'Loading...';
+      default:
+        return <Navigate to={fallbackPath}/>;
+    }
+  };
 
 const PrivateRoute = createAccessRouter('Auth', AppRoute.Login);
 const PublicRoute = createAccessRouter('NoAuth', AppRoute.Main);

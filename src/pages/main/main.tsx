@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { nanoid } from '@reduxjs/toolkit';
 import Header from '../../components/header/header';
-import LocationList from '../../components/location-list/location-list';
+import CityTabs from '../../components/city-tabs/city-tabs';
 import OfferCard from '../../components/offer-card/offer-card';
 import Sorting from '../../components/sorting/sorting';
 
@@ -20,11 +20,7 @@ export function Main({ places }: MainProps) {
       <Header/>
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
-        <div className="tabs">
-          <section className="locations container">
-            <LocationList />
-          </section>
-        </div>
+        <CityTabs />
         <div className="cities">
           <div className="cities__places-container container">
             <section className="cities__places places">

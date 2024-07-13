@@ -1,6 +1,13 @@
 import { nanoid } from '@reduxjs/toolkit';
 
-export const CITIES = ['Paris', 'Cologne', 'Brussels', 'Amsterdam', 'Hamburg', 'Dusseldorf'] as const;
+export const CITIES = [
+  { id: nanoid(10), name: 'Paris', slug: '/paris'},
+  { id: nanoid(10), name: 'Cologne', slug: '/cologne' },
+  { id: nanoid(10), name: 'Brussels', slug: '/brussels'},
+  { id: nanoid(10), name: 'Amsterdam', slug: '/amsterdam'},
+  { id: nanoid(10), name: 'Hamburg', slug: '/hamburg'},
+  { id: nanoid(10), name: 'Dusseldorf', slug: '/dusseldorf'},
+] as const;
 
 export const OFFER_GALLERIES_PICTURES = [
   { id: nanoid(10), path: 'img/room.jpg', alt: 'Photo studio'},
