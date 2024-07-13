@@ -8,15 +8,15 @@ const Page404 = () => (
       <title>Страница 404 Not Found</title>
     </Helmet>
 
-    <div className={style.root}>
-      <p className={style.root__text}>404 Not Found</p>
+    <main className={style.root}>
+      <h1 className={style.root__text}>Error - 404: Page Not Found</h1>
       <Link
-        className={style.root__link}
+        className='button form__submit'
         to="/"
       >
         Back to main page
       </Link>
-    </div>
+    </main>
   </>
 );
 

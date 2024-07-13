@@ -4,7 +4,7 @@ import Favorites from '../../pages/favorites/favorites';
 import Login from '../../pages/login-page/login';
 import Offer from '../../pages/offer/offer';
 import Page404 from '../../pages/page-404/page-404';
-import PrivateRoute from '../private-route/private-route';
+import { PrivateRoute, PublicRoute } from '../access-route/access-route';
 import { MainProps, Main } from '../../pages/main/main';
 import { AppRoute, AuthorizationStatus } from '../../const';
 
@@ -14,9 +14,14 @@ function App({ places }: MainProps) {
       <BrowserRouter>
         <Routes>
           <Route path={AppRoute.Main} element={<Main places={places} />} />
-          <Route path={AppRoute.Login} element={<Login />} />
+          <Route path={AppRoute.Login} element={
+            <PublicRoute status={AuthorizationStatus.Auth}>
+              <Login />
+            </PublicRoute>
+          }
+          />
           <Route path={AppRoute.Favorites} element={
-            <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+            <PrivateRoute status={AuthorizationStatus.NoAuth}>
               <Favorites />
             </PrivateRoute>
           }
