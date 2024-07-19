@@ -1,48 +1,21 @@
-import { NavLink } from 'react-router-dom';
-import classNames from 'classnames';
+// import classNames from 'classnames';
+import CityTabsItem from '../city-tabs-item/city-tabs-item';
 import { CITIES } from '../../const';
 
 function CityTabs() {
+  // const location = useLocation();
+  // console.log(location);
   return (
     <div className="tabs">
       <section className="locations container">
         <ul className='locations__list tabs__list'>
-          {CITIES.map(({ name, slug }) => (
-            <li className='locations__item' key={slug}>
-              <NavLink
-                className={({ isActive }) => classNames('locations__item-link',{
-                  'tabs__item--active': isActive
-                },
-                'tabs__item'
-                )}
-                to={slug}
-              >
-                <span>{name}</span>
-              </NavLink>
-            </li>
+          {CITIES.map(({ name, slug }, index) => (
+            <CityTabsItem name={name} slug={slug} activeClass={index === 2} key={slug}/>
           ))}
         </ul>
       </section>
     </div>
   );
 }
-
-// function LocationItem({ city, activeClass }: CitiesProp) {
-//   return (
-//     <li className="locations__item">
-//       <a className={`locations__item-link tabs__item ${activeClass ? 'tabs__item--active' : null }`} href="#">
-//         <span>{city}</span>
-//       </a>
-//     </li>
-//   );
-// }
-
-// function LocationList() {
-//   return (
-//     <ul className="locations__list tabs__list">
-//       {CITIES.map((city, index) => <LocationItem key={city} city={city} activeClass={index === 2} />)}
-//     </ul>
-//   );
-// }
 
 export default CityTabs;
