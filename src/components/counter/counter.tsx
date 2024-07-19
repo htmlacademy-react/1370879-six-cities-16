@@ -2,15 +2,22 @@ import { useState } from 'react';
 import styles from './style.module.css';
 
 function Counter() {
-  // const count: number = 0;
-  const [count, setCount] = useState(0);
+  const [counter, setCount] = useState<{ count: number}>({
+    count: 0
+  });
+
+  // const createTuple = (...params: [string, number, string[]]) => Object.freeze(params);
+  // console.log(createTuple('1', 2, ['1', '2', '3']));
 
   return (
     <div className={styles.counter}>
-      <h1>{count}</h1>
+      <h1>{counter.count}</h1>
 
       <button
-        onClick={() => setCount(count + 1)}
+        onClick={() => setCount({
+          ...counter,
+          count: counter.count + 1
+        })}
         className="custom-button"
       >
         INC
@@ -18,7 +25,10 @@ function Counter() {
 
 
       <button
-        onClick={() => setCount(count - 1)}
+        onClick={() => setCount({
+          ...counter,
+          count: counter.count - 1
+        })}
         className="custom-button"
       >
         DEC

@@ -4,6 +4,7 @@ import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
 import OfferCard from '../../components/offer-card/offer-card';
 import Sorting from '../../components/sorting/sorting';
+import Map from '../../components/map/map';
 
 const OFFER_CARD_COUNT: number = 5;
 
@@ -42,7 +43,7 @@ export function Main({ places }: MainProps) {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <Map/>
             </div>
           </div>
         </div>
