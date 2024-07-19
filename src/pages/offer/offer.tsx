@@ -1,9 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
-// import FormRating from '../../components/form-rating/form-rating';
 import ReviewsForm from '../../components/reviews-form/reviews-form';
+import { OfferMock } from '../../types/offers';
 
-function Offer() {
+type OfferTypeProps = {
+  offers: OfferMock[];
+}
+
+function Offer({ offers }: OfferTypeProps) {
+  // console.log(offers);
   return (
     <>
       <Helmet>
@@ -13,6 +18,7 @@ function Offer() {
         <section className="offer">
           <div className="offer__gallery-container container">
             <OfferGallery/>
+            {offers.map((offer) => offer.id)}
           </div>
           <div className="offer__container container">
             <div className="offer__wrapper">

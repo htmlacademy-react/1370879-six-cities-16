@@ -8,10 +8,15 @@ import { PrivateRoute, PublicRoute } from '../access-route/access-route';
 import { MainProps, Main } from '../../pages/main/main';
 import { AppRoute } from '../../const';
 import { AuthStatus } from '../../types/auth-status';
+import { OfferMock } from '../../types/offers';
 
 const currentStatus: AuthStatus = 'Auth';
 
-function App({ places }: MainProps) {
+type AppTypeProps = MainProps & {
+  offers: OfferMock[];
+}
+
+function App({ places, offers }: AppTypeProps) {
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -29,7 +34,7 @@ function App({ places }: MainProps) {
             </PrivateRoute>
           }
           />
-          <Route path={AppRoute.Offer} element={<Offer />} />
+          <Route path={AppRoute.Offer} element={<Offer offers={offers} />} />
           <Route path='*' element={<Page404 />} />
         </Routes>
       </BrowserRouter>

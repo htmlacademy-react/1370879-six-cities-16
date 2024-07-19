@@ -1,6 +1,20 @@
+// import { useState } from 'react';
 import FormRating from '../form-rating/form-rating';
 
 function ReviewsForm() {
+  // const [formData, setFormData] = useState({
+  //   textarea: ''
+  // });
+
+  // const handleFieldChange = (evt) => {
+  //   const { textarea, value } = evt.target;
+  //   setFormData({
+  //     ...formData,
+  //     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  //     [textarea]: value
+  //   });
+  //   console.log('Field is changed');
+  // };
   return (
     <form className="reviews__form form" action="#" method="post">
       <label className="reviews__label form__label" htmlFor="review">Your review</label>
