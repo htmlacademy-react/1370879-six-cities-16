@@ -1,18 +1,19 @@
 import { Helmet } from 'react-helmet-async';
-import { nanoid } from '@reduxjs/toolkit';
 import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
-import OfferCard from '../../components/offer-card/offer-card';
 import Sorting from '../../components/sorting/sorting';
 import Map from '../../components/map/map';
+import { Offer } from '../../types/offers';
+import OfferCardList from '../../components/offer-card-list/offer-card-list';
 
-const OFFER_CARD_COUNT: number = 5;
+// const OFFER_CARD_COUNT: number = 5;
 
 export type MainProps = {
   places: number;
+  offers: Offer[];
 }
 
-export function Main({ places }: MainProps) {
+export function Main({ places, offers }: MainProps) {
   return (
     <>
       <Helmet>
@@ -28,19 +29,7 @@ export function Main({ places }: MainProps) {
               <h2 className="visually-hidden">Places</h2>
               <b className="places__found">{places} places to stay in Amsterdam</b>
               <Sorting />
-              <div className="cities__places-list places__list tabs__content">
-                {Array.from({ length: OFFER_CARD_COUNT }).map(() => (
-                  <OfferCard
-                    isFavorite={false}
-                    name='Beautiful &amp; luxurious apartment at great location'
-                    isPremium
-                    src='img/apartment-01.jpg'
-                    price={120}
-                    type='Apartment'
-                    key={nanoid(10)}
-                  />
-                ))}
-              </div>
+              <OfferCardList offers={offers} places={0}/>
             </section>
             <div className="cities__right-section">
               <Map/>

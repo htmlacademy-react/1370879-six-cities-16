@@ -1,11 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
 import ReviewsForm from '../../components/reviews-form/reviews-form';
-import { OfferMock } from '../../types/offers';
+import { Offer } from '../../types/offers';
 import NearPlaces from '../../components/near-places/near-places';
 
 type OfferTypeProps = {
-  offers: OfferMock[];
+  offers: Offer[];
 }
 
 function OfferPage({ offers }: OfferTypeProps) {

@@ -1,4 +1,4 @@
-export interface OfferMock {
+export interface Offer {
   id: string;
   title: string;
   type: string;
