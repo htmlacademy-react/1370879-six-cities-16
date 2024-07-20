@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import Favorites from '../../pages/favorites/favorites';
-import Login from '../../pages/login-page/login';
-import Offer from '../../pages/offer/offer';
+import Favorites from '../../pages/favorites-page/favorites-page';
+import Login from '../../pages/login-page/login-page';
+import Offer from '../../pages/offer-page/offer-page';
 import Page404 from '../../pages/page-404/page-404';
 import { PrivateRoute, PublicRoute } from '../access-route/access-route';
-import { MainProps, Main } from '../../pages/main/main';
+import { MainProps, Main } from '../../pages/main-page/main';
 import { AppRoute } from '../../const';
 import { AuthStatus } from '../../types/auth-status';
 import { OfferMock } from '../../types/offers';

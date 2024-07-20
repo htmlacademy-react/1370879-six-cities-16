@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import Logo from '../../components/logo/logo';
 
-function Login() {
+function LoginPage() {
   return (
     <div className="page page--gray page--login">
       <Helmet>
@@ -46,4 +46,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginPage;

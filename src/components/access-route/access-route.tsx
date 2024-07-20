@@ -10,15 +10,6 @@ interface AccessRouterProps {
 
 const createAccessRouter = (statusToCheck: AuthStatus, fallbackPath: AppRoute) =>
   function AccessRoute({ children, status }: AccessRouterProps) {
-    // if (status === 'Unknown') {
-    //   return 'Loading...';
-    // }
-
-    // if (status === statusToCheck) {
-    //   return children;
-    // }
-
-    // return <Navigate to={fallbackPath} />;
     switch (status) {
       case statusToCheck:
         return children;

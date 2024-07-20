@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-function OfferNotLogged() {
+function OfferNotLoggedPage() {
   return (
     <>
       <Helmet>
@@ -266,4 +266,4 @@ function OfferNotLogged() {
   );
 }
 
-export default OfferNotLogged;
+export default OfferNotLoggedPage;

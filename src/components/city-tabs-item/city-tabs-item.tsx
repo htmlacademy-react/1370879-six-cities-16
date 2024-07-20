@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
 type CityTabsProps = {
   name: string;
@@ -7,10 +8,13 @@ type CityTabsProps = {
 }
 
 function CityTabsItem({ name, slug, activeClass }: CityTabsProps) {
+  const activeTabs: string = classNames('locations__item-link', {
+    'tabs__item--active': activeClass
+  });
   return (
     <li className='locations__item' key={slug}>
       <Link
-        className={`locations__item-link ${activeClass ? 'tabs__item--active' : ''}`}
+        className={activeTabs}
         to={slug}
       >
         <span>{name}</span>

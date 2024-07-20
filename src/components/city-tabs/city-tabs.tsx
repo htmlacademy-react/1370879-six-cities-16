@@ -7,7 +7,7 @@ function CityTabs() {
       <section className="locations container">
         <ul className='locations__list tabs__list'>
           {CITIES.map(({ name, slug }, index) => (
-            <CityTabsItem name={name} slug={slug} activeClass={index === 3} key={slug}/>
+            <CityTabsItem name={name} slug={slug} activeClass={index === 1} key={slug}/>
           ))}
         </ul>
       </section>
