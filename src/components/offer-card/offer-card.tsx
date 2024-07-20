@@ -1,3 +1,4 @@
+// import { useState } from 'react';
 import classNames from 'classnames';
 
 type OfferCardProps = {
@@ -10,6 +11,18 @@ type OfferCardProps = {
 }
 
 function OfferCard({ isFavorite, price, isPremium, name, type, src }: OfferCardProps) {
+  // const [selectedCard, setSelectedCard] = useState({
+  //   count: 0
+  // } as const);
+
+  // const onClickHandler = (event: { target: never }) => {
+  //   // console.log(event.target);
+  //   // setSelectedCard({
+  //   //   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/restrict-plus-operands
+  //   //   ...selectedCard,
+  //   //   count: count + 1
+  //   // });
+  // };
 
   const favoriteLabel: string = `${isFavorite ? 'In' : 'To'} bookmarks`;
   const favoriteClass: string = classNames('button', 'place-card__bookmark-button', {
