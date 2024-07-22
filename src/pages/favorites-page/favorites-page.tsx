@@ -1,11 +1,19 @@
 import { Helmet } from 'react-helmet-async';
+import { Offer } from '../../types/offers';
+import FavoritesCard from '../../components/favorites-card/favorites-card';
 
-function FavoritesPage() {
+type FavoritesPageProps = {
+  offers: Offer[];
+}
+
+function FavoritesPage({ offers }: FavoritesPageProps) {
   return (
     <>
       <Helmet>
         <title>Страница избранного не пустая</title>
       </Helmet>
+
+      {/* {console.log(offers)} */}
 
       <main className="page__main page__main--favorites">
         <div className="page__favorites-container container">
@@ -21,7 +29,17 @@ function FavoritesPage() {
                   </div>
                 </div>
                 <div className="favorites__places">
-                  <article className="favorites__card place-card">
+                  {offers.map((offer) => (
+                    <FavoritesCard
+                      isFavorite={offer.isFavorite}
+                      isPremium={offer.isPremium}
+                      price={offer.price}
+                      type={offer.type}
+                      key={offer.id}
+                      src={offer.previewImage}
+                    />
+                  ))}
+                  {/* <article className="favorites__card place-card">
                     <div className="place-card__mark">
                       <span>Premium</span>
                     </div>
@@ -86,7 +104,7 @@ function FavoritesPage() {
                       </h2>
                       <p className="place-card__type">Room</p>
                     </div>
-                  </article>
+                  </article> */}
                 </div>
               </li>
 
@@ -99,7 +117,17 @@ function FavoritesPage() {
                   </div>
                 </div>
                 <div className="favorites__places">
-                  <article className="favorites__card place-card">
+                  {offers.map((offer) => (
+                    <FavoritesCard
+                      isFavorite={offer.isFavorite}
+                      isPremium={offer.isPremium}
+                      price={offer.price}
+                      type={offer.type}
+                      key={offer.id}
+                      src={offer.previewImage}
+                    />
+                  ))}
+                  {/* <article className="favorites__card place-card">
                     <div className="favorites__image-wrapper place-card__image-wrapper">
                       <a href="#">
                         <img className="place-card__image" src="img/apartment-small-04.jpg" width="150" height="110" alt="Place image" />
@@ -129,7 +157,7 @@ function FavoritesPage() {
                       </h2>
                       <p className="place-card__type">Apartment</p>
                     </div>
-                  </article>
+                  </article> */}
                 </div>
               </li>
             </ul>

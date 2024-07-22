@@ -30,7 +30,7 @@ function App({ places, offers }: AppTypeProps) {
           />
           <Route path={AppRoute.Favorites} element={
             <PrivateRoute status={currentStatus}>
-              <Favorites />
+              <Favorites offers={offers}/>
             </PrivateRoute>
           }
           />
