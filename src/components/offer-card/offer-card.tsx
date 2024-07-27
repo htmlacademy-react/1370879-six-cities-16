@@ -3,6 +3,7 @@ import FavoritesButton from '../favorite-button/favorites-button';
 import { AppRoute } from '../../const';
 import { Offer } from '../../types/offers';
 import { Link } from 'react-router-dom';
+import { getMarkUpRanking, upFirstLetter } from '../../utils';
 
 type OfferCardProps = Offer & {
   offerCard: Offer;
@@ -13,7 +14,7 @@ const FAVORITES_CLASS_NAME = 'favorites';
 
 function OfferCard({ classname, offerCard }: OfferCardProps) {
   const [selectedCard, setSelectedCard] = useState<boolean>(false);
-  const { isFavorite, title, price, isPremium, type, previewImage } = offerCard;
+  const { isFavorite, title, price, isPremium, type, previewImage, rating } = offerCard;
 
   const onMouseOverHandler = () => {
     // event: MouseEvent<HTMLElement>
@@ -49,14 +50,14 @@ function OfferCard({ classname, offerCard }: OfferCardProps) {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{ width: 80 }}></span>
+            <span style={getMarkUpRanking(rating)}></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
         <h2 className="place-card__name">
           <Link to={AppRoute.Offer.replace(':id', offerCard.id)}>{title}</Link>
         </h2>
-        <p className="place-card__type">{type}</p>
+        <p className="place-card__type">{upFirstLetter(type)}</p>
       </div>
     </article>
   );

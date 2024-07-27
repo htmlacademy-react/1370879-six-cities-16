@@ -29,6 +29,7 @@ function FavoritesPage({ offers }: FavoritesPageProps) {
                 <div className="favorites__places">
                   {offers.map((offer) => (
                     <OfferCard
+                      classname={'favorites'}
                       offerCard={offer}
                       isFavorite={offer.isFavorite}
                       isPremium={offer.isPremium}
@@ -38,20 +39,19 @@ function FavoritesPage({ offers }: FavoritesPageProps) {
                       previewImage={offer.previewImage}
                       id={offer.id}
                       title={offer.title}
-                      city={{
-                        name: '',
-                        location: {
-                          latitude: 0,
-                          longitude: 0,
-                          zoom: 0
-                        }
-                      }} location={{
-                        latitude: 0,
-                        longitude: 0,
-                        zoom: 0
-                      }}
+                      // city={{
+                      //   name: '',
+                      //   location: {
+                      //     latitude: 0,
+                      //     longitude: 0,
+                      //     zoom: 0
+                      //   }
+                      // }} location={{
+                      //   latitude: 0,
+                      //   longitude: 0,
+                      //   zoom: 0
+                      // }}
                       rating={offer.rating}
-                      classname={'favorites'}
                     />
                   ))}
                 </div>
@@ -77,18 +77,18 @@ function FavoritesPage({ offers }: FavoritesPageProps) {
                       previewImage={offer.previewImage}
                       id={offer.id}
                       title={offer.title}
-                      city={{
-                        name: '',
-                        location: {
-                          latitude: 0,
-                          longitude: 0,
-                          zoom: 0
-                        }
-                      }} location={{
-                        latitude: 0,
-                        longitude: 0,
-                        zoom: 0
-                      }}
+                      // city={{
+                      //   name: '',
+                      //   location: {
+                      //     latitude: 0,
+                      //     longitude: 0,
+                      //     zoom: 0
+                      //   }
+                      // }} location={{
+                      //   latitude: 0,
+                      //   longitude: 0,
+                      //   zoom: 0
+                      // }}
                       rating={offer.rating}
                       classname={'cities'}
                     />

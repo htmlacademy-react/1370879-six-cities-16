@@ -7,19 +7,19 @@ const offers: Offer[] = [
     type: 'house',
     price: 390,
     previewImage: 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
-    city: {
-      name: 'Paris',
-      location: {
-        latitude: 48.85661,
-        longitude: 2.351499,
-        zoom: 13
-      }
-    },
-    location: {
-      latitude: 48.868610000000004,
-      longitude: 2.342499,
-      zoom: 16
-    },
+    // city: {
+    //   name: 'Paris',
+    //   location: {
+    //     latitude: 48.85661,
+    //     longitude: 2.351499,
+    //     zoom: 13
+    //   }
+    // },
+    // location: {
+    //   latitude: 48.868610000000004,
+    //   longitude: 2.342499,
+    //   zoom: 16
+    // },
     isFavorite: false,
     isPremium: true,
     rating: 3.4
@@ -30,19 +30,19 @@ const offers: Offer[] = [
     type: 'house',
     price: 390,
     previewImage: 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
-    city: {
-      name: 'Paris',
-      location: {
-        latitude: 48.85661,
-        longitude: 2.351499,
-        zoom: 13
-      }
-    },
-    location: {
-      latitude: 48.868610000000004,
-      longitude: 2.342499,
-      zoom: 16
-    },
+    // city: {
+    //   name: 'Paris',
+    //   location: {
+    //     latitude: 48.85661,
+    //     longitude: 2.351499,
+    //     zoom: 13
+    //   }
+    // },
+    // location: {
+    //   latitude: 48.868610000000004,
+    //   longitude: 2.342499,
+    //   zoom: 16
+    // },
     isFavorite: false,
     isPremium: true,
     rating: 3.4
@@ -53,19 +53,19 @@ const offers: Offer[] = [
     type: 'house',
     price: 390,
     previewImage: 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
-    city: {
-      name: 'Paris',
-      location: {
-        latitude: 48.85661,
-        longitude: 2.351499,
-        zoom: 13
-      }
-    },
-    location: {
-      latitude: 48.868610000000004,
-      longitude: 2.342499,
-      zoom: 16
-    },
+    // city: {
+    //   name: 'Paris',
+    //   location: {
+    //     latitude: 48.85661,
+    //     longitude: 2.351499,
+    //     zoom: 13
+    //   }
+    // },
+    // location: {
+    //   latitude: 48.868610000000004,
+    //   longitude: 2.342499,
+    //   zoom: 16
+    // },
     isFavorite: false,
     isPremium: true,
     rating: 3.4
@@ -76,19 +76,19 @@ const offers: Offer[] = [
     type: 'house',
     price: 390,
     previewImage: 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
-    city: {
-      name: 'Paris',
-      location: {
-        latitude: 48.85661,
-        longitude: 2.351499,
-        zoom: 13
-      }
-    },
-    location: {
-      latitude: 48.868610000000004,
-      longitude: 2.342499,
-      zoom: 16
-    },
+    // city: {
+    //   name: 'Paris',
+    //   location: {
+    //     latitude: 48.85661,
+    //     longitude: 2.351499,
+    //     zoom: 13
+    //   }
+    // },
+    // location: {
+    //   latitude: 48.868610000000004,
+    //   longitude: 2.342499,
+    //   zoom: 16
+    // },
     isFavorite: false,
     isPremium: true,
     rating: 3.4

@@ -16,12 +16,12 @@ type AppTypeProps = MainProps & {
   offers: Offer[];
 }
 
-function App({ places, offers }: AppTypeProps) {
+function App({ offers }: AppTypeProps) {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
-          <Route path={AppRoute.Main} element={<Main offers={offers} places={places} />} />
+          <Route path={AppRoute.Main} element={<Main offers={offers} />} />
           <Route path={AppRoute.Login} element={
             <PublicRoute status={currentStatus}>
               <Login />

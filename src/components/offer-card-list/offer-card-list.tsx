@@ -17,20 +17,20 @@ function OfferCardList({ offers }: MainProps) {
           previewImage={offer.previewImage}
           isFavorite={offer.isFavorite}
           isPremium={offer.isPremium}
-          rating={0}
-          city={{
-            name: '',
-            location: {
-              latitude: 0,
-              longitude: 0,
-              zoom: 0
-            }
-          }}
-          location={{
-            latitude: 0,
-            longitude: 0,
-            zoom: 0
-          }}
+          rating={offer.rating}
+          // city={{
+          //   name: '',
+          //   location: {
+          //     latitude: 0,
+          //     longitude: 0,
+          //     zoom: 0
+          //   }
+          // }}
+          // location={{
+          //   latitude: 0,
+          //   longitude: 0,
+          //   zoom: 0
+          // }}
         />
       ))}
     </div>
