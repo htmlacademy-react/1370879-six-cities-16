@@ -7,13 +7,30 @@ function OfferCardList({ offers }: MainProps) {
     <div className="cities__places-list places__list tabs__content">
       {offers.map((offer) => (
         <OfferCard
-          isFavorite={offer.isFavorite}
-          name={offer.title}
-          isPremium={offer.isPremium}
-          src={offer.previewImage}
-          price={offer.price}
-          type={offer.type}
+          classname='cities'
+          offerCard={offer}
           key={nanoid(10)}
+          id={offer.id}
+          title={offer.title}
+          type={offer.type}
+          price={offer.price}
+          previewImage={offer.previewImage}
+          isFavorite={offer.isFavorite}
+          isPremium={offer.isPremium}
+          rating={0}
+          city={{
+            name: '',
+            location: {
+              latitude: 0,
+              longitude: 0,
+              zoom: 0
+            }
+          }}
+          location={{
+            latitude: 0,
+            longitude: 0,
+            zoom: 0
+          }}
         />
       ))}
     </div>

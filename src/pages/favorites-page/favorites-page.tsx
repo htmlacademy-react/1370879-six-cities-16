@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Offer } from '../../types/offers';
-import FavoritesCard from '../../components/favorites-card/favorites-card';
+import OfferCard from '../../components/offer-card/offer-card';
 
 type FavoritesPageProps = {
   offers: Offer[];
@@ -28,13 +28,30 @@ function FavoritesPage({ offers }: FavoritesPageProps) {
                 </div>
                 <div className="favorites__places">
                   {offers.map((offer) => (
-                    <FavoritesCard
+                    <OfferCard
+                      offerCard={offer}
                       isFavorite={offer.isFavorite}
                       isPremium={offer.isPremium}
                       price={offer.price}
                       type={offer.type}
                       key={offer.id}
-                      src={offer.previewImage}
+                      previewImage={offer.previewImage}
+                      id={offer.id}
+                      title={offer.title}
+                      city={{
+                        name: '',
+                        location: {
+                          latitude: 0,
+                          longitude: 0,
+                          zoom: 0
+                        }
+                      }} location={{
+                        latitude: 0,
+                        longitude: 0,
+                        zoom: 0
+                      }}
+                      rating={offer.rating}
+                      classname={'favorites'}
                     />
                   ))}
                 </div>
@@ -50,13 +67,30 @@ function FavoritesPage({ offers }: FavoritesPageProps) {
                 </div>
                 <div className="favorites__places">
                   {offers.map((offer) => (
-                    <FavoritesCard
+                    <OfferCard
+                      offerCard={offer}
                       isFavorite={offer.isFavorite}
                       isPremium={offer.isPremium}
                       price={offer.price}
                       type={offer.type}
                       key={offer.id}
-                      src={offer.previewImage}
+                      previewImage={offer.previewImage}
+                      id={offer.id}
+                      title={offer.title}
+                      city={{
+                        name: '',
+                        location: {
+                          latitude: 0,
+                          longitude: 0,
+                          zoom: 0
+                        }
+                      }} location={{
+                        latitude: 0,
+                        longitude: 0,
+                        zoom: 0
+                      }}
+                      rating={offer.rating}
+                      classname={'cities'}
                     />
                   ))}
                 </div>
