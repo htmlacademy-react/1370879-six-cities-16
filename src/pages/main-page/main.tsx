@@ -6,14 +6,11 @@ import Map from '../../components/map/map';
 import { Offer } from '../../types/offers';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
 
-// const OFFER_CARD_COUNT: number = 5;
-
 export type MainProps = {
-  places: number;
   offers: Offer[];
 }
 
-export function Main({ places, offers }: MainProps) {
+export function Main({ offers }: MainProps) {
   return (
     <>
       <Helmet>
@@ -27,9 +24,9 @@ export function Main({ places, offers }: MainProps) {
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">{places} places to stay in Amsterdam</b>
+              <b className="places__found">{offers.length} places to stay in Amsterdam</b>
               <Sorting />
-              <OfferCardList offers={offers} places={0}/>
+              <OfferCardList offers={offers} />
             </section>
             <div className="cities__right-section">
               <Map/>
