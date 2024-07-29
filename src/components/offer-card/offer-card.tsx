@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import FavoritesButton from '../favorite-button/favorites-button';
 import { AppRoute } from '../../const';
-import { Offer } from '../../types/offers';
+import { Offers } from '../../types/offer';
 import { Link } from 'react-router-dom';
 import { getMarkUpRanking, upFirstLetter } from '../../utils';
 
-type OfferCardProps = Offer & {
-  offerCard: Offer;
+type OfferCardProps = Offers & {
+  offerCard: Offers;
   classname: string;
 }
 

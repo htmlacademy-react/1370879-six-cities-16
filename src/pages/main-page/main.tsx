@@ -3,11 +3,11 @@ import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
 import Sorting from '../../components/sorting/sorting';
 import Map from '../../components/map/map';
-import { Offer } from '../../types/offers';
+import { Offers } from '../../types/offer';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
 
 export type MainProps = {
-  offers: Offer[];
+  offers: Offers[];
 }
 
 export function Main({ offers }: MainProps) {

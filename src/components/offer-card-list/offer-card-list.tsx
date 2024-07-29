@@ -18,19 +18,6 @@ function OfferCardList({ offers }: MainProps) {
           isFavorite={offer.isFavorite}
           isPremium={offer.isPremium}
           rating={offer.rating}
-          // city={{
-          //   name: '',
-          //   location: {
-          //     latitude: 0,
-          //     longitude: 0,
-          //     zoom: 0
-          //   }
-          // }}
-          // location={{
-          //   latitude: 0,
-          //   longitude: 0,
-          //   zoom: 0
-          // }}
         />
       ))}
     </div>
