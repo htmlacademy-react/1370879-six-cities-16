@@ -1,8 +1,8 @@
 import OfferCard from '../../components/offer-card/offer-card';
-import { Offer } from '../../types/offers';
+import { Offers } from '../../types/offer';
 
 type FavoritesContainerProps = {
-  favoriteOfferCards: Offer[];
+  favoriteOfferCards: Offers[];
 }
 
 function FavoritesContainer({ favoriteOfferCards }: FavoritesContainerProps) {

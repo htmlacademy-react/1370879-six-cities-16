@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import Favorites from '../../pages/favorites-page/favorites-page';
+// import FavoritesPage from '../../pages/favorites-page/favorites-page';
 import Login from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
 import Page404 from '../../pages/page-404/page-404';
@@ -8,17 +8,19 @@ import { PrivateRoute, PublicRoute } from '../access-route/access-route';
 import { MainProps, Main } from '../../pages/main-page/main';
 import { AppRoute } from '../../const';
 import { AuthStatus } from '../../types/auth-status';
-import { Offer } from '../../types/offers';
-import { getFavoritesOfferCards } from '../../utils';
+import { Offers } from '../../types/offer';
+// import { getFavoritesOfferCards } from '../../utils';
 
 const currentStatus: AuthStatus = 'Auth';
 
 type AppTypeProps = MainProps & {
-  offers: Offer[];
+  offers: Offers[];
 }
 
 function App({ offers }: AppTypeProps) {
-  const favoriteOfferCards = getFavoritesOfferCards(offers);
+  // const favoriteOfferCards = getFavoritesOfferCards(offers);
+
+  // console.log(favoriteOfferCards);
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -32,7 +34,8 @@ function App({ offers }: AppTypeProps) {
           />
           <Route path={AppRoute.Favorites} element={
             <PrivateRoute status={currentStatus}>
-              <Favorites favoriteOfferCards={favoriteOfferCards}/>
+              {/* <FavoritesPage favoriteOfferCards={favoriteOfferCards}/> */}
+              <p></p>
             </PrivateRoute>
           }
           />

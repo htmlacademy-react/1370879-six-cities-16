@@ -1,6 +1,6 @@
-import { Offer } from '../../types/offers';
+import { Offers } from '../../types/offer';
 
-const offers: Offer[] = [
+const offers: Offers[] = [
   {
     id: '3b1d1f4b-990c-4e1a-abe5-d0405da10fff',
     title: 'Loft Studio in the Central Area',

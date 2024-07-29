@@ -1,4 +1,4 @@
-import { ChangeEventHandler, useState } from 'react';
+import { useState } from 'react';
 import FormRating from '../form-rating/form-rating';
 
 function ReviewForm() {
@@ -6,14 +6,14 @@ function ReviewForm() {
     textarea: ''
   });
 
-  const handleFieldChange = (evt: ChangeEventHandler) => {
+  const handleFieldChange = () => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     // const {, value } = evt;
     setFormData({
       ...formData,
-      [textarea]: value
+      // [textarea]: value
     });
-    console.log('Field is changed');
+    // console.log('Field is changed');
   };
   return (
     <form className="reviews__form form" action="#" method="post">

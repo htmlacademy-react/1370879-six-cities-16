@@ -1,4 +1,4 @@
-import { Offer } from '../types/offers';
+import { Offer } from '../types/offer';
 
 export const getMarkUpRanking = (ranking: number) => {
   const rankingInPercent = `${(Math.floor(ranking) / 5) * 100}%`;

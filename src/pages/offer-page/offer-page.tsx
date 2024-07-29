@@ -1,14 +1,28 @@
 import { Helmet } from 'react-helmet-async';
-import OfferGallery from '../../components/offer-gallery/offer-gallery';
+import { Navigate, useParams } from 'react-router-dom';
+// import OfferGallery from '../../components/offer-gallery/offer-gallery';
 import ReviewsForm from '../../components/review-form/review-form';
-import { Offer } from '../../types/offers';
+import { Offers } from '../../types/offer';
 import NearPlaces from '../../components/near-places/near-places';
+import { AppRoute } from '../../const';
 
 type OfferTypeProps = {
-  offers: Offer[];
+  offers: Offers[];
 }
 
 function OfferPage({ offers }: OfferTypeProps) {
+  const {id: offerId} = useParams();
+  // const navigate = Navigate;
+
+  const currentOffer = offers.find((offer) => offer.id === offerId);
+
+  if (!currentOffer) {
+    return <Navigate to={AppRoute.NotFound} />;
+  }
+
+  // const offersNearBy = offers.slice(0, 3);
+  // console.log(currentOffer);
+  // console.log(offersNearBy);
   return (
     <>
       <Helmet>
@@ -17,7 +31,7 @@ function OfferPage({ offers }: OfferTypeProps) {
       <main className="page__main page__main--offer">
         <section className="offer">
           <div className="offer__gallery-container container">
-            <OfferGallery />
+            {/* <OfferGallery currentOffer={currentOffer}/> */}
             {offers.map((offer) => offer.id)}
           </div>
           <div className="offer__container container">
