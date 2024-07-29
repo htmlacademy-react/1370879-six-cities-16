@@ -9,6 +9,7 @@ import { MainProps, Main } from '../../pages/main-page/main';
 import { AppRoute } from '../../const';
 import { AuthStatus } from '../../types/auth-status';
 import { Offer } from '../../types/offers';
+import { getFavoritesOfferCards } from '../../utils';
 
 const currentStatus: AuthStatus = 'Auth';
 
@@ -17,6 +18,7 @@ type AppTypeProps = MainProps & {
 }
 
 function App({ offers }: AppTypeProps) {
+  const favoriteOfferCards = getFavoritesOfferCards(offers);
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -30,7 +32,7 @@ function App({ offers }: AppTypeProps) {
           />
           <Route path={AppRoute.Favorites} element={
             <PrivateRoute status={currentStatus}>
-              <Favorites offers={offers}/>
+              <Favorites favoriteOfferCards={favoriteOfferCards}/>
             </PrivateRoute>
           }
           />

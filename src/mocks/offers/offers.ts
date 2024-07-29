@@ -22,7 +22,7 @@ const offers: Offer[] = [
     // },
     isFavorite: false,
     isPremium: true,
-    rating: 3.4
+    rating: 3.4,
   },
   {
     id: 'f0899063-6422-469b-bab1-0cc1d2e473d3',
@@ -43,7 +43,7 @@ const offers: Offer[] = [
     //   longitude: 2.342499,
     //   zoom: 16
     // },
-    isFavorite: false,
+    isFavorite: true,
     isPremium: true,
     rating: 3.4
   },
@@ -89,7 +89,7 @@ const offers: Offer[] = [
     //   longitude: 2.342499,
     //   zoom: 16
     // },
-    isFavorite: false,
+    isFavorite: true,
     isPremium: true,
     rating: 3.4
   }

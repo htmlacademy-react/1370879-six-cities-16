@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
-import ReviewsForm from '../../components/reviews-form/reviews-form';
+import ReviewsForm from '../../components/review-form/review-form';
 import { Offer } from '../../types/offers';
 import NearPlaces from '../../components/near-places/near-places';
 
@@ -17,7 +17,7 @@ function OfferPage({ offers }: OfferTypeProps) {
       <main className="page__main page__main--offer">
         <section className="offer">
           <div className="offer__gallery-container container">
-            <OfferGallery/>
+            <OfferGallery />
             {offers.map((offer) => offer.id)}
           </div>
           <div className="offer__container container">

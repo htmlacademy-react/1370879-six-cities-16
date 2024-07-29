@@ -1,14 +1,14 @@
-import { OFFER_GALLERIES_PICTURES } from '../../const';
+import { OFFER_GALLERIES_PICTURES } from '../../const.ts';
+// import { Offer } from '../../types/offers';
 
-type OfferGalleryProps = {
+type OfferGalleryItemProps = {
   path: string;
-  alt: string;
 }
 
-function OfferGalleryItem({ path, alt }: OfferGalleryProps) {
+function OfferGalleryItem({ path }: OfferGalleryItemProps) {
   return (
     <div className="offer__image-wrapper">
-      <img className="offer__image" src={path} alt={alt} />
+      <img className="offer__image" src={path} alt="Photo studio" />
     </div>
   );
 }
@@ -16,7 +16,7 @@ function OfferGalleryItem({ path, alt }: OfferGalleryProps) {
 function OfferGallery() {
   return (
     <div className="offer__gallery">
-      {OFFER_GALLERIES_PICTURES.map((item) => <OfferGalleryItem key={item.id} path={item.path} alt={item.alt}/>)}
+      {OFFER_GALLERIES_PICTURES.map((item) => <OfferGalleryItem key={item.id} path={item.path} />)}
     </div>
   );
 }

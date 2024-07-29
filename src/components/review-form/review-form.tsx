@@ -1,27 +1,27 @@
-// import { useState } from 'react';
+import { ChangeEventHandler, useState } from 'react';
 import FormRating from '../form-rating/form-rating';
 
-function ReviewsForm() {
-  // const [formData, setFormData] = useState({
-  //   textarea: ''
-  // });
+function ReviewForm() {
+  const [formData, setFormData] = useState({
+    textarea: ''
+  });
 
-  // const handleFieldChange = (evt) => {
-  //   const { textarea, value } = evt.target;
-  //   setFormData({
-  //     ...formData,
-  //     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  //     [textarea]: value
-  //   });
-  //   console.log('Field is changed');
-  // };
+  const handleFieldChange = (evt: ChangeEventHandler) => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // const {, value } = evt;
+    setFormData({
+      ...formData,
+      [textarea]: value
+    });
+    console.log('Field is changed');
+  };
   return (
     <form className="reviews__form form" action="#" method="post">
       <label className="reviews__label form__label" htmlFor="review">Your review</label>
       <div className="reviews__rating-form form__rating">
         <FormRating />
       </div>
-      <textarea className="reviews__textarea form__textarea" id="review" name="review" placeholder="Tell how was your stay, what you like and what can be improved"></textarea>
+      <textarea onChange={handleFieldChange} className="reviews__textarea form__textarea" id="review" name="review" placeholder="Tell how was your stay, what you like and what can be improved"></textarea>
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
           To submit review please make sure to set <span className="reviews__star">rating</span> and describe your stay with at least <b className="reviews__text-amount">50 characters</b>.
@@ -32,4 +32,4 @@ function ReviewsForm() {
   );
 }
 
-export default ReviewsForm;
+export default ReviewForm;

@@ -18,7 +18,7 @@ export const OFFER_GALLERIES_PICTURES = [
   { id: nanoid(10), path: 'img/apartment-01.jpg', alt: 'Photo studio'},
 ];
 
-export const placesCount: number = 312;
+// export const placesCount: number = 312;
 
 export enum AppRoute {
   Main = '/',
