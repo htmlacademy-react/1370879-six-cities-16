@@ -1,8 +1,12 @@
 import { nanoid } from '@reduxjs/toolkit';
-import { MainProps } from '../../pages/main-page/main';
 import OfferCard from '../offer-card/offer-card';
+import { OfferCardType } from '../../types/offer';
 
-function OfferCardList({ offers }: MainProps) {
+type OfferCardListProps = {
+  offers: OfferCardType[];
+}
+
+function OfferCardList({ offers }: OfferCardListProps) {
   return (
     <div className="cities__places-list places__list tabs__content">
       {offers.map((offer) => (
@@ -18,6 +22,19 @@ function OfferCardList({ offers }: MainProps) {
           isFavorite={offer.isFavorite}
           isPremium={offer.isPremium}
           rating={offer.rating}
+          city={{
+            name: '',
+            location: {
+              latitude: 0,
+              longitude: 0,
+              zoom: 0
+            }
+          }}
+          location={{
+            latitude: 0,
+            longitude: 0,
+            zoom: 0
+          }}
         />
       ))}
     </div>

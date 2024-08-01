@@ -1,11 +1,13 @@
-import OfferCard from '../../components/offer-card/offer-card';
-import { Offers } from '../../types/offer';
+// import OfferCard from '../../components/offer-card/offer-card';
+import { OfferCardType } from '../../types/offer';
 
 type FavoritesContainerProps = {
-  favoriteOfferCards: Offers[];
+  favoriteOfferCards: OfferCardType[];
 }
 
 function FavoritesContainer({ favoriteOfferCards }: FavoritesContainerProps) {
+  // console.log(favoriteOfferCards);
+  // console.log(OfferCard);
   return (
     <section className="favorites">
       <h1 className="favorites__title">Saved listing</h1>
@@ -14,12 +16,12 @@ function FavoritesContainer({ favoriteOfferCards }: FavoritesContainerProps) {
           <div className="favorites__locations locations locations--current">
             <div className="locations__item">
               <a className="locations__item-link" href="#">
-                <span>Amsterdam</span>
+                {/* <span>{favoriteOfferCards.map(item)}</span> */}
               </a>
             </div>
           </div>
           <div className="favorites__places">
-            {favoriteOfferCards.map((offer) => (
+            {/* {favoriteOfferCards.map((offer) => (
               <OfferCard
                 classname={'favorites'}
                 offerCard={offer}
@@ -32,12 +34,26 @@ function FavoritesContainer({ favoriteOfferCards }: FavoritesContainerProps) {
                 id={offer.id}
                 title={offer.title}
                 rating={offer.rating}
+                city={{
+                  name: '',
+                  location: {
+                    latitude: 0,
+                    longitude: 0,
+                    zoom: 0
+                  }
+                }}
+                location={{
+                  latitude: 0,
+                  longitude: 0,
+                  zoom: 0
+                }}
               />
-            ))}
+            ))} */}
+            {favoriteOfferCards.map((card) => card.city.name)}
           </div>
         </li>
 
-        <li className="favorites__locations-items">
+        {/* <li className="favorites__locations-items">
           <div className="favorites__locations locations locations--current">
             <div className="locations__item">
               <a className="locations__item-link" href="#">
@@ -59,10 +75,23 @@ function FavoritesContainer({ favoriteOfferCards }: FavoritesContainerProps) {
                 id={offer.id}
                 title={offer.title}
                 rating={offer.rating}
+                city={{
+                  name: '',
+                  location: {
+                    latitude: 0,
+                    longitude: 0,
+                    zoom: 0
+                  }
+                }}
+                location={{
+                  latitude: 0,
+                  longitude: 0,
+                  zoom: 0
+                }}
               />
             ))}
           </div>
-        </li>
+        </li> */}
       </ul>
     </section>
   );

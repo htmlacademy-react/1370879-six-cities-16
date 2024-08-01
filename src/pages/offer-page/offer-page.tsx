@@ -2,12 +2,12 @@ import { Helmet } from 'react-helmet-async';
 import { Navigate, useParams } from 'react-router-dom';
 // import OfferGallery from '../../components/offer-gallery/offer-gallery';
 import ReviewsForm from '../../components/review-form/review-form';
-import { Offers } from '../../types/offer';
+import { OfferTemplateType } from '../../types/offer';
 import NearPlaces from '../../components/near-places/near-places';
 import { AppRoute } from '../../const';
 
 type OfferTypeProps = {
-  offers: Offers[];
+  offers: OfferTemplateType[];
 }
 
 // type CurrentOffer = {

@@ -1,6 +1,6 @@
-import { Offers } from '../../types/offer';
+import { OfferCardType } from '../../types/offer';
 
-const offers: Offers[] = [
+const offers: OfferCardType[] = [
   {
     id: '3b1d1f4b-990c-4e1a-abe5-d0405da10fff',
     title: 'Loft Studio in the Central Area',

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import { Offers } from '../../types/offer';
+import { OfferTemplateType } from '../../types/offer';
 
 type CityTabsItemsProps = {
   cityName: string;
@@ -8,7 +8,7 @@ type CityTabsItemsProps = {
 }
 
 type CityTabsProps = {
-  offers: Offers[];
+  offers: OfferTemplateType[];
 }
 
 function CityTabsItem({ cityName, activeClass }: CityTabsItemsProps) {
