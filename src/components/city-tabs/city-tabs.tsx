@@ -1,38 +1,39 @@
-// import CityTabsItem from '../city-tabs-item/city-tabs-item';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import { offers } from '../../mocks/offers/offers';
 import { Offers } from '../../types/offer';
 
-type CityTabsProps = {
-  offerList: Offers;
+type CityTabsItemsProps = {
+  cityName: string;
   activeClass: string;
 }
 
-function CityTabsItem({ offerList, activeClass }: CityTabsProps) {
-  const {city, id } = offerList;
+type CityTabsProps = {
+  offers: Offers[];
+}
+
+function CityTabsItem({ cityName, activeClass }: CityTabsItemsProps) {
   const activeTabs: string = classNames('locations__item-link', {
-    'tabs__item--active': activeClass === city.name
+    'tabs__item--active': activeClass === cityName
   });
   return (
-    <li className='locations__item' key={id}>
+    <li className='locations__item' key={cityName}>
       <Link
         className={activeTabs}
         to={'#'}
       >
-        <span>{city.name}</span>
+        <span>{cityName}</span>
       </Link>
     </li>
   );
 }
 
-function CityTabs() {
+function CityTabs({ offers }: CityTabsProps) {
   return (
     <div className="tabs">
       <section className="locations container">
         <ul className='locations__list tabs__list'>
           {offers.map((offer) => (
-            <CityTabsItem offerList={offer} activeClass={'Amsterdam'} key={offer.id}/>
+            <CityTabsItem cityName={offer.city.name} activeClass={'Berlin'} key={offer.id}/>
           ))}
         </ul>
       </section>

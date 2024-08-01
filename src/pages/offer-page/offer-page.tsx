@@ -10,6 +10,10 @@ type OfferTypeProps = {
   offers: Offers[];
 }
 
+// type CurrentOffer = {
+//   currentOffer: Offer[];
+// }
+
 function OfferPage({ offers }: OfferTypeProps) {
   const {id: offerId} = useParams();
   // const navigate = Navigate;
@@ -31,8 +35,8 @@ function OfferPage({ offers }: OfferTypeProps) {
       <main className="page__main page__main--offer">
         <section className="offer">
           <div className="offer__gallery-container container">
-            {/* <OfferGallery currentOffer={currentOffer}/> */}
-            {offers.map((offer) => offer.id)}
+            {/* <OfferGallery currentOffer={offers}/> */}
+            {/* {offers.map((offer) => offer.id)} */}
           </div>
           <div className="offer__container container">
             <div className="offer__wrapper">

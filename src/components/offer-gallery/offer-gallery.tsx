@@ -1,10 +1,11 @@
-// import { OFFER_GALLERIES_PICTURES } from '../../const.ts';
-// import { Offer } from '../../types/offers';
-
 // import { Offers } from '../../types/offer';
 
 // type OfferGalleryItemProps = {
 //   path: string;
+// }
+
+// type OfferGalleryProps = {
+//   offers: Offers[];
 // }
 
 // function OfferGalleryItem({ path }: OfferGalleryItemProps) {
@@ -15,12 +16,13 @@
 //   );
 // }
 
-function OfferGallery() {
-  // return (
-  //   <div className="offer__gallery">
-  //     {currentOffer.images.map((image) => <OfferGalleryItem key={image.id} path={image}/>)}
-  //   </div>
-  // );
-}
+// function OfferGallery({ offers }: OfferGalleryProps) {
+//   const currentOffer = offers.filter((offer) => offer.id);
+//   return (
+//     <div className="offer__gallery">
+//       {/* {currentOffer.images.map((image) => <OfferGalleryItem key={image} path={image}/>)} */}
+//     </div>
+//   );
+// }
 
-export default OfferGallery;
+// export default OfferGallery;
