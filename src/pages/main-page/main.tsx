@@ -19,7 +19,7 @@ export function Main({ offers }: MainProps) {
       <Header/>
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
-        <CityTabs />
+        <CityTabs/>
         <div className="cities">
           <div className="cities__places-container container">
             <section className="cities__places places">
