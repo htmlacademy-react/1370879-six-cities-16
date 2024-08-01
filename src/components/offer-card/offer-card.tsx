@@ -3,7 +3,7 @@ import FavoritesButton from '../favorite-button/favorites-button';
 import { AppRoute } from '../../const';
 import { OfferCardType } from '../../types/offer';
 import { Link } from 'react-router-dom';
-import { getMarkUpRanking, upFirstLetter } from '../../utils';
+import { getMarkUpRanking, makeFirstLetterUppercase } from '../../utils';
 
 type OfferCardProps = {
   offerCard: OfferCardType;
@@ -14,7 +14,7 @@ const FAVORITES_CLASS_NAME = 'favorites';
 
 function OfferCard({ classname, offerCard }: OfferCardProps) {
   const [selectedCard, setSelectedCard] = useState<boolean>(false);
-  const { isFavorite, title, price, isPremium, type, previewImage, rating } = offerCard;
+  const { isFavorite, title, price, id, isPremium, type, previewImage, rating } = offerCard;
 
   const onMouseOverHandler = () => {
     // event: MouseEvent<HTMLElement>
@@ -36,7 +36,7 @@ function OfferCard({ classname, offerCard }: OfferCardProps) {
         </div>
       )}
       <div className={`${classname}__image-wrapper place-card__image-wrapper`}>
-        <Link to={AppRoute.Offer.replace(':id', offerCard.id)}>
+        <Link to={AppRoute.Offer.replace(':id', id)}>
           <img className="place-card__image" src={previewImage} width={imgWidth} height={imgHeight} alt="Place image" />
         </Link>
       </div>
@@ -55,9 +55,9 @@ function OfferCard({ classname, offerCard }: OfferCardProps) {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={AppRoute.Offer.replace(':id', offerCard.id)}>{title}</Link>
+          <Link to={AppRoute.Offer.replace(':id', id)}>{title}</Link>
         </h2>
-        <p className="place-card__type">{upFirstLetter(type)}</p>
+        <p className="place-card__type">{makeFirstLetterUppercase(type)}</p>
       </div>
     </article>
   );

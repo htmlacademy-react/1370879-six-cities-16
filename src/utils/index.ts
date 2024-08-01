@@ -5,7 +5,7 @@ export const getMarkUpRanking = (ranking: number) => {
   return {width: rankingInPercent};
 };
 
-export const upFirstLetter = (string: string) => `${string[0].toUpperCase()}${string.slice(1)}`;
+export const makeFirstLetterUppercase = (string: string) => `${string[0].toUpperCase()}${string.slice(1)}`;
 
 export const getFavoritesOfferCards = (offers: OfferCardType[]) => offers.filter((offer) => offer.isFavorite);
 
