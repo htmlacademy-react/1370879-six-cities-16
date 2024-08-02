@@ -16,10 +16,9 @@ function OfferCard({ classname, offerCard }: OfferCardProps) {
   const [selectedCard, setSelectedCard] = useState<boolean>(false);
   const { isFavorite, title, price, id, isPremium, type, previewImage, rating } = offerCard;
 
-  const onMouseOverHandler = () => {
-    // event: MouseEvent<HTMLElement>
-    // console.log(event.target);
-    // const {width, alt} = event.target;
+  // console.log(id);
+
+  const onClickHandler = () => {
     setSelectedCard(true);
   };
 
@@ -28,7 +27,7 @@ function OfferCard({ classname, offerCard }: OfferCardProps) {
   const cardInfoClassName = classname === FAVORITES_CLASS_NAME ? 'favorites__card-info' : '';
 
   return (
-    <article onMouseOver={onMouseOverHandler} className={`${classname}__card place-card`}>
+    <article onClick={onClickHandler} className={`${classname}__card place-card`}>
       {selectedCard}
       {isPremium && (
         <div className="place-card__mark">
