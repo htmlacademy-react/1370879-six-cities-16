@@ -4,7 +4,7 @@ import CityTabs from '../../components/city-tabs/city-tabs';
 import Sorting from '../../components/sorting/sorting';
 import Map from '../../components/map/map';
 import { OfferCardType } from '../../types/offer';
-// import OfferCardList from '../../components/offer-card-list/offer-card-list';
+import OfferCardList from '../../components/offer-card-list/offer-card-list';
 
 export type MainProps = {
   offers: OfferCardType[];
@@ -24,9 +24,9 @@ export function Main({ offers }: MainProps) {
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">{offers.length} places to stay in {offers.map((offer) => offer.city.name)}</b>
+              <b className="places__found">{offers.length} places to stay in Amsterdam</b>
               <Sorting />
-              {/* <OfferCardList offers={offers} /> */}
+              <OfferCardList offers={offers} />
             </section>
             <div className="cities__right-section">
               <Map/>
