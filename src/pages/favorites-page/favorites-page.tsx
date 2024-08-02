@@ -3,14 +3,13 @@ import { OfferCardType } from '../../types/offer';
 import FavoritesContainer from '../../components/favorites-container/favorites-container';
 import FavoritesEmpty from '../favorites-empty-page/favorites-empty-page';
 import { getFavoritesOfferCards } from '../../utils';
-// import { offers } from '../../mocks/offers/offers';
 
 type FavoritesPageProps = {
   offers: OfferCardType[];
 }
 
 function FavoritesPage({ offers }: FavoritesPageProps) {
-  const favoriteOfferCards = getFavoritesOfferCards(offers);
+  const favoriteOfferCards = getFavoritesOfferCards();
   return (
     <>
       <Helmet>

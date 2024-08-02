@@ -1,4 +1,6 @@
 import { OfferCardType } from '../types/offer';
+import { offers } from '../mocks/offers/offers';
+import { offersPage } from '../mocks/offers/offer';
 
 type OffersByCityType = {
   [key: string]: OfferCardType[];
@@ -11,7 +13,9 @@ export const getMarkUpRanking = (ranking: number) => {
 
 export const makeFirstLetterUppercase = (string: string) => `${string[0].toUpperCase()}${string.slice(1)}`;
 
-export const getFavoritesOfferCards = (offers: OfferCardType[]) => offers.filter((offer) => offer.isFavorite);
+export const getCurrentOffer = (offerId: string | undefined) => offersPage.find((offer) => offer.id === offerId);
+
+export const getFavoritesOfferCards = () => offers.filter((offer) => offer.isFavorite);
 
 export const getOfferCardsByCity = (offerCards: OfferCardType[]) => {
   const cardsByCity: OffersByCityType = {};
