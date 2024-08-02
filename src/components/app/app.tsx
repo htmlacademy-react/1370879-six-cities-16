@@ -34,7 +34,7 @@ function App({ offers }: AppTypeProps) {
             </PrivateRoute>
           }
           />
-          <Route path={AppRoute.Offer} element={<OfferPage offers={offers} />} />
+          <Route path={AppRoute.Offer} element={<OfferPage />} />
           <Route path='*' element={<Page404 />} />
         </Routes>
       </BrowserRouter>
