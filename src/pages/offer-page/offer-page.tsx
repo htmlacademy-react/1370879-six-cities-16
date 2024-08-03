@@ -7,10 +7,15 @@ import OfferContainer from '../../components/offer-container/offer-container';
 
 function OfferPage() {
   const {id: offerId} = useParams();
+  // const params = useParams();
+
+  // console.log(params);
 
   // console.log(offerId);
 
   const currentOffer = getCurrentOffer(offerId);
+
+  // console.log(currentOffer);
 
   if (!currentOffer) {
     return <Navigate to={AppRoute.NotFound} replace />;

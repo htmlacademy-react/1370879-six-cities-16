@@ -33,3 +33,7 @@ export const getOfferCardsByCity = (offerCards: OfferCardType[]) => {
 
 export const getBedroomsString = (count: number) => `${count} Bedroom${count > 1 ? 's' : ''}`;
 export const getAdultsString = (count: number) => `Max ${count} adult${count > 1 ? 's' : ''}`;
+
+// const current = getCurrentOffer('6af6f711-c28d-4121-82cd-e0b462a27f00');
+
+// console.log(current);

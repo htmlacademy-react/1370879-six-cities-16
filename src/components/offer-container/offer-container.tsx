@@ -1,5 +1,4 @@
 import { OfferType } from '../../types/offer';
-// import ReviewForm from '../review-form/review-form';
 import FavoritesButton from '../favorite-button/favorites-button';
 import NearPlaces from '../../components/near-places/near-places';
 import { getAdultsString, getBedroomsString, getMarkUpRanking, makeFirstLetterUppercase } from '../../utils';
@@ -12,6 +11,8 @@ type OfferContainerType = {
 function OfferContainer({ offer }: OfferContainerType) {
   const { isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods, host, description} = offer;
   // console.log(offer.images);
+
+  // console.log(offer);
   return (
     <div className="offer__container container">
       <div className="offer__wrapper">
