@@ -1,16 +1,26 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import style from './style.module.css';
+import Counter from '../../components/counter/counter';
 
 const Page404 = () => (
-  <div className={style.root}>
-    <p className={style.root__text}>404 Not Found</p>
-    <Link
-      className={style.root__link}
-      to="/"
-    >
+  <>
+    <Helmet>
+      <title>Страница 404 Not Found</title>
+    </Helmet>
+
+    <main className={style.root}>
+      <h1 className={style.root__text}>Error - 404: Page Not Found</h1>
+      <Link
+        className='button form__submit'
+        to="/"
+      >
         Back to main page
-    </Link>
-  </div>
+      </Link>
+    </main>
+
+    <Counter/>
+  </>
 );
 
 export default Page404;
