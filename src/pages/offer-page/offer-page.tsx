@@ -1,9 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { Navigate, useParams } from 'react-router-dom';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
+import NearPlaces from '../../components/near-places/near-places';
+import OfferContainer from '../../components/offer-container/offer-container';
 import { AppRoute } from '../../const';
 import { getCurrentOffer } from '../../utils';
-import OfferContainer from '../../components/offer-container/offer-container';
 
 function OfferPage() {
   const {id: offerId} = useParams();
@@ -26,6 +27,9 @@ function OfferPage() {
           </div>
           <OfferContainer offer={currentOffer} />
           <section className="offer__map map"></section>
+          <div className="container">
+            <NearPlaces />
+          </div>
         </section>
       </main>
     </>
