@@ -1,4 +1,3 @@
-// import { offers } from '../../mocks/offers/offers';
 import { OfferTemplateType } from '../../types/offer';
 import Map from '../map/map';
 

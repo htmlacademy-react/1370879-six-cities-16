@@ -11,7 +11,7 @@ function Map({ offers }: MapProps) {
     console.log(offers.map((offer) => offer.id));
   });
   return (
-    <div style={{ width: '500px', height: '500px', backgroundColor: 'red'}}></div>
+    <div style={{ height: '500px', backgroundColor: 'red'}}></div>
   );
 }
 
