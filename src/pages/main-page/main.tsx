@@ -2,10 +2,9 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
 import Sorting from '../../components/sorting/sorting';
-// import Map from '../../components/map/map';
-import { OfferCardType } from '../../types/offer';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
-import MapContainer from '../../components/map-container/map-container';
+import Map from '../../components/map/map';
+import { OfferCardType } from '../../types/offer';
 
 export type MainProps = {
   offers: OfferCardType[];
@@ -30,7 +29,7 @@ export function Main({ offers }: MainProps) {
               <OfferCardList offers={offers} />
             </section>
             <div className="cities__right-section">
-              <MapContainer offers={offers}/>
+              <Map offers={offers}/>
             </div>
           </div>
         </div>

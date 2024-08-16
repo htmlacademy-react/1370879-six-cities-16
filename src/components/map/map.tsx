@@ -1,17 +1,18 @@
-import { useEffect } from 'react';
 import { OfferTemplateType } from '../../types/offer';
 
-type MapProps = {
-  offers: OfferTemplateType[];
+type MapContainerProps = {
+  offers?: OfferTemplateType[];
+  baseClassName?: string;
 }
 
-function Map({ offers }: MapProps) {
-  useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log(offers.map((offer) => offer.id));
-  });
+function Map({ baseClassName = 'cities', offers }: MapContainerProps) {
   return (
-    <div style={{ height: '500px', backgroundColor: 'red'}}></div>
+    <section
+      className={`${baseClassName}__map map`}
+      style={{ height: '500px', backgroundColor: 'red'}}
+    >
+      {offers?.map((offer) => offer.id)}
+    </section>
   );
 }
 
