@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import FavoritesButton from '../favorite-button/favorites-button';
 import { AppRoute } from '../../const';
 import { OfferCardType } from '../../types/offer';
@@ -8,27 +8,26 @@ import { getMarkUpRanking, makeFirstLetterUppercase } from '../../utils';
 type OfferCardProps = {
   offerCard: OfferCardType;
   classname: string;
+  onMouseOver: () => void;
+  onMouseLeave: () => void;
 }
 
 const FAVORITES_CLASS_NAME = 'favorites';
 
-function OfferCard({ classname, offerCard }: OfferCardProps) {
-  const [selectedCard, setSelectedCard] = useState<boolean>(false);
+function OfferCard({ classname, offerCard, onMouseOver, onMouseLeave }: OfferCardProps) {
+  // const [selectedCard, setSelectedCard] = useState<boolean>(false);
   const { isFavorite, title, price, id, isPremium, type, previewImage, rating } = offerCard;
-
-  // console.log(id);
-
-  const onClickHandler = () => {
-    setSelectedCard(true);
-  };
 
   const imgWidth = classname === FAVORITES_CLASS_NAME ? 150 : 260;
   const imgHeight = classname === FAVORITES_CLASS_NAME ? 110 : 200;
   const cardInfoClassName = classname === FAVORITES_CLASS_NAME ? 'favorites__card-info' : '';
 
   return (
-    <article onClick={onClickHandler} className={`${classname}__card place-card`}>
-      {selectedCard}
+    <article
+      className={`${classname}__card place-card`}
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
+    >
       {isPremium && (
         <div className="place-card__mark">
           <span>Premium</span>

@@ -3,7 +3,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
 import NearPlaces from '../../components/near-places/near-places';
 import OfferContainer from '../../components/offer-container/offer-container';
-import MapContainer from '../../components/map/map';
+// import Map from '../../components/map/map';
 import { AppRoute } from '../../const';
 import { getCurrentOffer } from '../../utils';
 
@@ -27,7 +27,7 @@ function OfferPage() {
             <OfferGallery images={currentOffer.images}/>
           </div>
           <OfferContainer offer={currentOffer} />
-          <MapContainer baseClassName='offer'/>
+          {/* <Map baseClassName='offer'/> */}
           <div className="container">
             <NearPlaces />
           </div>

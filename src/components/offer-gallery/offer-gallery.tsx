@@ -1,3 +1,5 @@
+import { nanoid } from '@reduxjs/toolkit';
+
 type OfferGalleryItemProps = {
   path: string;
 }
@@ -17,7 +19,7 @@ function OfferGalleryItem({ path }: OfferGalleryItemProps) {
 function OfferGallery({ images }: OfferGalleryProps) {
   return (
     <div className="offer__gallery">
-      {images.map((image) => <OfferGalleryItem key={image} path={image}/>)}
+      {images.map((image) => <OfferGalleryItem key={nanoid()} path={image}/>)}
     </div>
   );
 }

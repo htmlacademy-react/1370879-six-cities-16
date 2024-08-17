@@ -1,24 +1,34 @@
 import { Link } from 'react-router-dom';
-import classNames from 'classnames';
 import { OfferTemplateType } from '../../types/offer';
 
 type CityTabsItemsProps = {
   cityName: string;
-  activeClass: string;
+  isActive: boolean;
+  onClick: (city: string) => void | undefined;
 }
 
 type CityTabsProps = {
   offers: OfferTemplateType[];
+  selectedCity: string;
+  onCityClick: (city: string) => void;
 }
 
-function CityTabsItem({ cityName, activeClass }: CityTabsItemsProps) {
-  const activeTabs: string = classNames('locations__item-link', {
-    'tabs__item--active': activeClass === cityName
-  });
+function CityTabsItem({ cityName, isActive, onClick }: CityTabsItemsProps) {
+  const onClickHandler = () => {
+    if (onClick) {
+      onClick(cityName);
+      // console.log(cityName);
+      // console.log(isActive);
+    }
+  };
+
   return (
-    <li className='locations__item' key={cityName}>
+    <li
+      className='locations__item'
+      onClick={onClickHandler}
+    >
       <Link
-        className={activeTabs}
+        className={`locations__item-link tabs__item ${isActive ? 'tabs__item--active' : ''}`}
         to={'#'}
       >
         <span>{cityName}</span>
@@ -27,17 +37,19 @@ function CityTabsItem({ cityName, activeClass }: CityTabsItemsProps) {
   );
 }
 
-function CityTabs({ offers }: CityTabsProps) {
+function CityTabs({ selectedCity, offers, onCityClick }: CityTabsProps) {
   return (
-    <div className="tabs">
-      <section className="locations container">
-        <ul className='locations__list tabs__list'>
-          {offers.map((offer) => (
-            <CityTabsItem cityName={offer.city.name} activeClass={'Berlin'} key={offer.id}/>
-          ))}
-        </ul>
-      </section>
-    </div>
+    <ul className='locations__list tabs__list'>
+      {offers.map((offer) => (
+        <CityTabsItem
+          isActive={offer.city.name === selectedCity}
+          onClick={onCityClick}
+          cityName={offer.city.name}
+          key={offer.id}
+        />
+      ))}
+    </ul>
+
   );
 }
 

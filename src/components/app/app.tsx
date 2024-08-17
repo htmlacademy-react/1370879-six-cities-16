@@ -21,7 +21,18 @@ function App({ offers }: AppTypeProps) {
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
-          <Route path={AppRoute.Main} element={<Main offers={offers} />} />
+          <Route
+            path={AppRoute.Main}
+            element={
+              <Main
+                // onCityClick={onCityClickHandler}
+                // selectedCity={selectedCity}
+                // onHover={onHoverHandler}
+                // activeOffer={activeOffer}
+                offers={offers}
+              />
+            }
+          />
           <Route path={AppRoute.Login} element={
             <PublicRoute status={currentStatus}>
               <Login />
