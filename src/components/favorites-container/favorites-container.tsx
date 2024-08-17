@@ -9,9 +9,6 @@ type FavoritesContainerProps = {
 function FavoritesContainer({ favoriteOfferCards }: FavoritesContainerProps) {
   const offerCardsByCity = getOfferCardsByCity(favoriteOfferCards);
 
-  // console.log(offerCardsByCity);
-  // console.log(favoriteOfferCards);
-  // console.log(OfferCard);
   return (
     <section className="favorites">
       <h1 className="favorites__title">Saved listing</h1>

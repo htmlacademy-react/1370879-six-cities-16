@@ -8,8 +8,8 @@ import { getMarkUpRanking, makeFirstLetterUppercase } from '../../utils';
 type OfferCardProps = {
   offerCard: OfferCardType;
   classname: string;
-  onMouseOver: () => void;
-  onMouseLeave: () => void;
+  onMouseOver?: () => void;
+  onMouseLeave?: () => void;
 }
 
 const FAVORITES_CLASS_NAME = 'favorites';
