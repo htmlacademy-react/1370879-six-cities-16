@@ -5,7 +5,7 @@ import Login from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
 import Page404 from '../../pages/page-404/page-404';
 import { PrivateRoute, PublicRoute } from '../access-route/access-route';
-import { Main } from '../../pages/main-page/main';
+import Main from '../../pages/main-page/main';
 import { AppRoute } from '../../const';
 import { AuthStatus } from '../../types/auth-status';
 import { OfferCardType } from '../../types/offer';
