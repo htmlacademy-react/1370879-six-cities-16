@@ -2,20 +2,30 @@
 // import leaflet, { LayerGroup } from 'leaflet';
 // import 'leaflet/dist/leaflet.css';
 // import { OfferTemplateType } from '../../types/offer';
+// import { URL_MARKER_DEFAULT, URL_MARKER_CURRENT } from '../../const';
 
 // type MapProps = {
-//   // offers?: OfferTemplateType[];
+//   offers?: OfferTemplateType[];
 //   city: string;
 //   baseClassName?: string;
+//   activeOffer?: OfferTemplateType | null;
 // }
 
-// function Map({ baseClassName = 'cities', city }): MapProps {
+// const defaultCustomIcon = leaflet.icon({
+//   iconUrl: URL_MARKER_DEFAULT,
+//   iconSize: [27, 39],
+//   iconAnchor: [13, 39],
+// });
+
+// const currentCustomIcon = leaflet.icon({
+//   iconUrl: URL_MARKER_CURRENT,
+//   iconSize: [27, 39],
+//   iconAnchor: [13, 39],
+// });
+
+// function Map({ baseClassName = 'cities', city, offers, activeOffer }): MapProps {
 //   const mapRef = useRef<HTMLDivElement>(null);
-//   console.log(offers);
-//   console.log(mapRef);
-//   console.log(leaflet);
-//   console.log(LayerGroup);
-//   console.log(city);
+
 //   return (
 //     <section
 //       className={`${baseClassName}__map map`}

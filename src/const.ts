@@ -1,5 +1,8 @@
 import { nanoid } from '@reduxjs/toolkit';
 
+export const URL_MARKER_DEFAULT = 'markup/img/pin.svg';
+export const URL_MARKER_CURRENT = 'markup/img/pin-active.svg';
+
 export const CITIES = [
   { id: nanoid(10), name: 'Paris', slug: '/paris'},
   { id: nanoid(10), name: 'Cologne', slug: '/cologne' },

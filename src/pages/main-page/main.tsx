@@ -13,8 +13,7 @@ export type MainProps = {
 }
 
 function Main({ offers }: MainProps) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_, setActiveOffer] = useState<OfferCardType | null>(null);
+  const [, setActiveOffer] = useState<OfferCardType | null>(null);
   const [selectedCity, setSelectedCity] = useState('Amsterdam');
   const isEmptyPage = offers.length === 0;
 
