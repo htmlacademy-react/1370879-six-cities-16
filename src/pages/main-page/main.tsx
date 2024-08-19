@@ -13,7 +13,8 @@ export type MainProps = {
 }
 
 function Main({ offers }: MainProps) {
-  const [activeOffer, setActiveOffer] = useState<OfferCardType | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_, setActiveOffer] = useState<OfferCardType | null>(null);
   const [selectedCity, setSelectedCity] = useState('Amsterdam');
   const isEmptyPage = offers.length === 0;
 
@@ -25,20 +26,19 @@ function Main({ offers }: MainProps) {
     setSelectedCity(city);
   };
 
-  // eslint-disable-next-line no-unused-expressions
-  { activeOffer; }
-  // const city = offers.find((offer) => offer.city.name === selectedCity);
+  // console.log(activeOffer);
+
   return (
     <>
       <Helmet>
         <title>Главная страница предложения Шесть Городов</title>
       </Helmet>
-      <Header/>
+      <Header />
       <main className={`page__main page__main--index ${isEmptyPage ? 'page__main--index-empty' : ''}`}>
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
           <section className="locations container">
-            <CityTabs offers={offers} selectedCity={selectedCity} onCityClick={onCityClickHandler}/>
+            <CityTabs offers={offers} selectedCity={selectedCity} onCityClick={onCityClickHandler} />
           </section>
         </div>
         <div className="cities">
@@ -57,14 +57,14 @@ function Main({ offers }: MainProps) {
               </>
             ) : (
               <>
-                <section className = "cities__places places">
-                  <h2 className = "visually-hidden">Places</h2>
+                <section className="cities__places places">
+                  <h2 className="visually-hidden">Places</h2>
                   <b className="places__found">{offers.length} places to stay in Amsterdam</b>
                   <Sorting />
                   <OfferCardList offers={offers} onHover={onHoverHandler} />
                 </section>
                 <div className="cities__right-section">
-                  {/* <Map city={city} offers={offers} /> */}
+                  {/* <Map city={activeOffer} offers={offers} /> */}
                 </div>
               </>
             )}

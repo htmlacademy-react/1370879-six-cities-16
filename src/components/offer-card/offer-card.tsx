@@ -22,6 +22,9 @@ function OfferCard({ classname, offerCard, onMouseOver, onMouseLeave }: OfferCar
   const imgHeight = classname === FAVORITES_CLASS_NAME ? 110 : 200;
   const cardInfoClassName = classname === FAVORITES_CLASS_NAME ? 'favorites__card-info' : '';
 
+  // console.log(onMouseLeave);
+  // console.log(onMouseLeave);
+
   return (
     <article
       className={`${classname}__card place-card`}
