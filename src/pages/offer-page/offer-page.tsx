@@ -16,6 +16,8 @@ function OfferPage() {
     return <Navigate to={AppRoute.NotFound} replace />;
   }
 
+  // const cityInfo = CITY_LOCATIONS.find((city) => city.name === currentOffer.city.name);
+
   return (
     <>
       <Helmet>
@@ -27,7 +29,7 @@ function OfferPage() {
             <OfferGallery images={currentOffer.images}/>
           </div>
           <OfferContainer offer={currentOffer} />
-          {/* <Map baseClassName='offer'/> */}
+          {/* <Map city={cityInfo.location} baseClassName='offer'/> */}
           <div className="container">
             <NearPlaces />
           </div>

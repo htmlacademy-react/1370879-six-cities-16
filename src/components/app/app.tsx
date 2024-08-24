@@ -17,6 +17,9 @@ type AppTypeProps = {
 }
 
 function App({ offers }: AppTypeProps) {
+  // const element = <div className='page__main-element'>Element</div>;
+
+  // console.log(element);
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -25,10 +28,10 @@ function App({ offers }: AppTypeProps) {
             path={AppRoute.Main}
             element={
               <Main
-                // onCityClick={onCityClickHandler}
-                // selectedCity={selectedCity}
+                // // onCityClick={onCityClickHandler}
+                // // selectedCity={selectedCity}
                 // onHover={onHoverHandler}
-                // activeOffer={activeOffer}
+                // // activeOffer={activeOffer}
                 offers={offers}
               />
             }

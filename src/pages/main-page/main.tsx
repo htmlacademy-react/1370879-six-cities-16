@@ -6,6 +6,7 @@ import Sorting from '../../components/sorting/sorting';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
 // import Map from '../../components/map/map';
 import { OfferCardType } from '../../types/offer';
+// import { CITY_LOCATIONS } from '../../const';
 
 export type MainProps = {
   offers: OfferCardType[];
@@ -63,7 +64,7 @@ function Main({ offers }: MainProps) {
                   <OfferCardList offers={offers} onHover={onHoverHandler} />
                 </section>
                 <div className="cities__right-section">
-                  {/* <Map city={activeOffer} offers={offers} /> */}
+                  {/* <Map city={CITY_LOCATIONS[selectedCity]} offers={offers} activeOffer={activeOffer} /> */}
                 </div>
               </>
             )}

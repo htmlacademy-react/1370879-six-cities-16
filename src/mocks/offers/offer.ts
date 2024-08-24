@@ -29,7 +29,7 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-max.jpg',
       isPro: false
     },
     images: [
@@ -71,7 +71,7 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-max.jpg',
       isPro: false
     },
     images: [
@@ -113,7 +113,7 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-max.jpg',
       isPro: false
     },
     images: [
@@ -155,7 +155,7 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-angelina.jpg',
       isPro: false
     },
     images: [
@@ -197,7 +197,7 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-angelina.jpg',
       isPro: false
     },
     images: [
