@@ -8,7 +8,7 @@ type OfferContainerType = {
 }
 
 function OfferContainer({ offer }: OfferContainerType) {
-  const { isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods, host, description} = offer;
+  const { isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods, host, description } = offer;
 
   return (
     <div className="offer__container container">

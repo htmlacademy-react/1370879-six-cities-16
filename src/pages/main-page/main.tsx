@@ -41,7 +41,7 @@ function Main({ offers }: MainProps) {
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
           <section className="locations container">
-            <CityTabs offers={offers} selectedCity={selectedCity} onCityClick={onCityClickHandler} />
+            <CityTabs cities={CITY_LOCATIONS} selectedCity={selectedCity} onCityClick={onCityClickHandler} />
           </section>
         </div>
         <div className="cities">

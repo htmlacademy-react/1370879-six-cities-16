@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { OfferTemplateType } from '../../types/offer';
+import { City } from '../../types/offer';
 
 type CityTabsItemsProps = {
   cityName: string;
@@ -8,7 +8,7 @@ type CityTabsItemsProps = {
 }
 
 type CityTabsProps = {
-  offers: OfferTemplateType[];
+  cities: City[];
   selectedCity: string;
   onCityClick: (city: string) => void;
 }
@@ -36,15 +36,14 @@ function CityTabsItem({ cityName, isActive, onClick }: CityTabsItemsProps) {
   );
 }
 
-function CityTabs({ selectedCity, offers, onCityClick }: CityTabsProps) {
-  // console.log(selectedCity);
+function CityTabs({ selectedCity, cities, onCityClick }: CityTabsProps) {
   return (
     <ul className='locations__list tabs__list'>
-      {offers.map((offer) => (
+      {cities.map((offer) => (
         <CityTabsItem
-          isActive={offer.city.name === selectedCity}
+          isActive={offer.id === selectedCity}
           onClick={onCityClick}
-          cityName={offer.city.name}
+          cityName={offer.name}
           key={offer.id}
         />
       ))}

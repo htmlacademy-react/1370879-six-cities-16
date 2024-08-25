@@ -11,15 +11,13 @@ import { AuthStatus } from '../../types/auth-status';
 import { OfferCardType } from '../../types/offer';
 
 const currentStatus: AuthStatus = 'Auth';
+// const currentStatus: AuthStatus = 'NoAuth';
 
 type AppTypeProps = {
   offers: OfferCardType[];
 }
 
 function App({ offers }: AppTypeProps) {
-  // const element = <div className='page__main-element'>Element</div>;
-
-  // console.log(element);
   return (
     <HelmetProvider>
       <BrowserRouter>

@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navigate, useParams } from 'react-router-dom';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
 import NearPlaces from '../../components/near-places/near-places';
+import Header from '../../components/header/header';
 import OfferContainer from '../../components/offer-container/offer-container';
 // import Map from '../../components/map/map';
 import { AppRoute } from '../../const';
@@ -23,6 +24,7 @@ function OfferPage() {
       <Helmet>
         <title>Страница предложения</title>
       </Helmet>
+      <Header/>
       <main className="page__main page__main--offer">
         <section className="offer">
           <div className="offer__gallery-container container">
