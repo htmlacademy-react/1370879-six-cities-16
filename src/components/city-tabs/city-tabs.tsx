@@ -14,6 +14,7 @@ type CityTabsProps = {
 }
 
 function CityTabsItem({ cityName, isActive, onClick }: CityTabsItemsProps) {
+  // console.log(isActive);
   const onClickHandler = () => {
     if (onClick) {
       onClick(cityName);
@@ -36,6 +37,7 @@ function CityTabsItem({ cityName, isActive, onClick }: CityTabsItemsProps) {
 }
 
 function CityTabs({ selectedCity, offers, onCityClick }: CityTabsProps) {
+  // console.log(selectedCity);
   return (
     <ul className='locations__list tabs__list'>
       {offers.map((offer) => (

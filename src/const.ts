@@ -1,4 +1,5 @@
 import { nanoid } from '@reduxjs/toolkit';
+import { City } from './types/offer';
 
 export const URL_MARKER_DEFAULT = 'markup/img/pin.svg';
 export const URL_MARKER_CURRENT = 'markup/img/pin-active.svg';
@@ -23,7 +24,7 @@ export const OFFER_GALLERIES_PICTURES = [
   { id: nanoid(10), path: 'img/apartment-01.jpg', alt: 'Photo studio'},
 ];
 
-export const CITY_LOCATIONS = [
+export const CITY_LOCATIONS: City[] = [
   {
     id: 'paris',
     location: { latitude: 48.85661, longitude: 2.351499, zoom: 13 },

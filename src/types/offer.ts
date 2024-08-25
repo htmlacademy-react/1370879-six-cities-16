@@ -10,6 +10,12 @@ export type LocationType = {
   zoom: number;
 }
 
+export type City = {
+  id: string;
+  location: LocationType;
+  name: string;
+}
+
 export type OfferTemplateType = {
   id: string;
   title: string;

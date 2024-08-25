@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react';
 import leaflet, { LayerGroup } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { OfferTemplateType, LocationType } from '../../types/offer';
+import { OfferTemplateType, City } from '../../types/offer';
 import { URL_MARKER_DEFAULT, URL_MARKER_CURRENT } from '../../const';
 import useMap from '../../hooks/use-map';
 
 type MapProps = {
   offers?: OfferTemplateType[];
-  city: LocationType;
+  city: City;
   baseClassName?: string;
   activeOffer?: OfferTemplateType | null;
 }
@@ -35,7 +35,7 @@ function Map({ baseClassName = 'cities', city, offers, activeOffer }: MapProps) 
   useEffect(() => {
     if (map) {
       // console.log(map);
-      map.setView([city.latitude, city.longitude], city.zoom);
+      map.setView([city.location.latitude, city.location.longitude], city.location.zoom);
       markerLayer.current.addTo(map);
       markerLayer.current.clearLayers();
     }

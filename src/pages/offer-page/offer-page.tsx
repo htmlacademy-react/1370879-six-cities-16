@@ -29,7 +29,7 @@ function OfferPage() {
             <OfferGallery images={currentOffer.images}/>
           </div>
           <OfferContainer offer={currentOffer} />
-          {/* <Map city={cityInfo.location} baseClassName='offer'/> */}
+          {/* <Map city={cityInfo} baseClassName='offer'/> */}
           <div className="container">
             <NearPlaces />
           </div>

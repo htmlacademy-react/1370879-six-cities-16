@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef, RefObject } from 'react';
-import { LocationType } from '../types/offer';
+import { City } from '../types/offer';
 import { TILE_LAYER_URL_PATTERN, TILE_LAYER_ATTRIBUTION } from '../const.ts';
 import leaflet from 'leaflet';
 
 
 type UseMapProps = {
   mapRef: RefObject<HTMLDivElement>;
-  city: LocationType;
+  city: City;
 }
 
 function useMap({ mapRef, city }: UseMapProps) {
@@ -17,10 +17,10 @@ function useMap({ mapRef, city }: UseMapProps) {
     if (mapRef.current !== null && !isRenderedRef.current) {
       const instance = leaflet.map(mapRef.current, {
         center: {
-          lat: city.latitude,
-          lng: city.longitude
+          lat: city.location.latitude,
+          lng: city.location.longitude
         },
-        zoom: city.zoom,
+        zoom: city.location.zoom,
       });
 
       leaflet

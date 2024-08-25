@@ -4,9 +4,9 @@ import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
 import Sorting from '../../components/sorting/sorting';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
-// import Map from '../../components/map/map';
-import { OfferCardType } from '../../types/offer';
-// import { CITY_LOCATIONS } from '../../const';
+import Map from '../../components/map/map';
+import { City, OfferCardType } from '../../types/offer';
+import { CITY_LOCATIONS } from '../../const';
 
 export type MainProps = {
   offers: OfferCardType[];
@@ -14,9 +14,11 @@ export type MainProps = {
 }
 
 function Main({ offers }: MainProps) {
-  const [, setActiveOffer] = useState<OfferCardType | null>(null);
-  const [selectedCity, setSelectedCity] = useState('Amsterdam');
+  const [activeOffer, setActiveOffer] = useState<OfferCardType | null>(null);
+  const [selectedCity, setSelectedCity] = useState('amsterdam');
   const isEmptyPage = offers.length === 0;
+
+  // console.log(selectedCity);
 
   const onHoverHandler = (offer?: OfferCardType) => {
     setActiveOffer(offer || null);
@@ -26,6 +28,7 @@ function Main({ offers }: MainProps) {
     setSelectedCity(city);
   };
 
+  const city: City = CITY_LOCATIONS.find((cityObj) => cityObj.id === selectedCity) as City;
   // console.log(activeOffer);
 
   return (
@@ -64,7 +67,7 @@ function Main({ offers }: MainProps) {
                   <OfferCardList offers={offers} onHover={onHoverHandler} />
                 </section>
                 <div className="cities__right-section">
-                  {/* <Map city={CITY_LOCATIONS[selectedCity]} offers={offers} activeOffer={activeOffer} /> */}
+                  <Map city={city} offers={offers} activeOffer={activeOffer} />
                 </div>
               </>
             )}
