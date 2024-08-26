@@ -24,9 +24,6 @@ const currentCustomIcon = leaflet.icon({
   iconAnchor: [13, 39],
 });
 
-// console.log(defaultCustomIcon);
-// console.log(currentCustomIcon);
-
 function Map({ baseClassName = 'cities', city, offers, activeOffer }: MapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const map = useMap({ mapRef, city });
@@ -35,7 +32,7 @@ function Map({ baseClassName = 'cities', city, offers, activeOffer }: MapProps) 
   useEffect(() => {
     if (map) {
       // console.log(map);
-      map.setView([city.location.latitude, city.location.longitude], city.location.zoom);
+      map.setView([city?.location.latitude, city?.location.longitude], city?.location.zoom);
       markerLayer.current.addTo(map);
       markerLayer.current.clearLayers();
     }
@@ -57,11 +54,6 @@ function Map({ baseClassName = 'cities', city, offers, activeOffer }: MapProps) 
       });
     }
   }, [activeOffer, map, offers]);
-
-  // console.log(city);
-  // console.log(LayerGroup);
-  // console.log(offers);
-  // console.log(activeOffer);
 
   return (
     <section
