@@ -4,7 +4,7 @@ import style from './style.module.css';
 import Counter from '../../components/counter/counter';
 
 const Page404 = () => (
-  <>
+  <div className="page page--not-found">
     <Helmet>
       <title>Страница 404 Not Found</title>
     </Helmet>
@@ -19,8 +19,8 @@ const Page404 = () => (
       </Link>
     </main>
 
-    <Counter/>
-  </>
+    <Counter />
+  </div>
 );
 
 export default Page404;

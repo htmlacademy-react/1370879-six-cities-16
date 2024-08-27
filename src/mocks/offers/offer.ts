@@ -29,11 +29,16 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-max.jpg',
       isPro: false
     },
     images: [
-      'https://url-to-image/image.png'
+      'img/room.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+      'img/studio-01.jpg',
+      'img/apartment-01.jpg',
     ],
     maxAdults: 4,
     isFavorite: false
@@ -66,11 +71,16 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-max.jpg',
       isPro: false
     },
     images: [
-      'https://url-to-image/image.png'
+      'img/room.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+      'img/studio-01.jpg',
+      'img/apartment-01.jpg',
     ],
     maxAdults: 4,
     isFavorite: false
@@ -103,11 +113,16 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-max.jpg',
       isPro: false
     },
     images: [
-      'https://url-to-image/image.png'
+      'img/room.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+      'img/studio-01.jpg',
+      'img/apartment-01.jpg',
     ],
     maxAdults: 4,
     isFavorite: false
@@ -140,11 +155,16 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-angelina.jpg',
       isPro: false
     },
     images: [
-      'https://url-to-image/image.png'
+      'img/room.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+      'img/studio-01.jpg',
+      'img/apartment-01.jpg',
     ],
     maxAdults: 4,
     isFavorite: false
@@ -177,11 +197,16 @@ export const offersPage: OfferType[] = [
     ],
     host: {
       name: 'Oliver Conner',
-      avatarUrl: 'https://url-to-image/image.png',
+      avatarUrl: 'img/avatar-angelina.jpg',
       isPro: false
     },
     images: [
-      'https://url-to-image/image.png'
+      'img/room.jpg',
+      'img/apartment-01.jpg',
+      'img/apartment-02.jpg',
+      'img/apartment-03.jpg',
+      'img/studio-01.jpg',
+      'img/apartment-01.jpg',
     ],
     maxAdults: 4,
     isFavorite: false

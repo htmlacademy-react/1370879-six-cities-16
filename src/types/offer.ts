@@ -1,13 +1,19 @@
-type HostType = {
+export type HostType = {
   name: string;
   avatarUrl: string;
   isPro: boolean;
 }
 
-type LocationType = {
+export type LocationType = {
   latitude: number;
   longitude: number;
   zoom: number;
+}
+
+export type City = {
+  id: string;
+  location: LocationType;
+  name: string;
 }
 
 export type OfferTemplateType = {

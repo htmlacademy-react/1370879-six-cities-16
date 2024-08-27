@@ -5,12 +5,14 @@ import Login from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
 import Page404 from '../../pages/page-404/page-404';
 import { PrivateRoute, PublicRoute } from '../access-route/access-route';
-import { Main } from '../../pages/main-page/main';
+import MainPage from '../../pages/main-page/main-page';
+import Layout from '../layout/layout';
 import { AppRoute } from '../../const';
 import { AuthStatus } from '../../types/auth-status';
 import { OfferCardType } from '../../types/offer';
 
 const currentStatus: AuthStatus = 'Auth';
+// const currentStatus: AuthStatus = 'NoAuth';
 
 type AppTypeProps = {
   offers: OfferCardType[];
@@ -21,10 +23,21 @@ function App({ offers }: AppTypeProps) {
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
-          <Route path={AppRoute.Main} element={<Main offers={offers} />} />
+          <Route
+            path={AppRoute.Main}
+            element={
+              <Layout>
+                <MainPage
+                  offers={offers}
+                />
+              </Layout>
+            }
+          />
           <Route path={AppRoute.Login} element={
             <PublicRoute status={currentStatus}>
-              <Login />
+              <Layout>
+                <Login />
+              </Layout>
             </PublicRoute>
           }
           />
@@ -34,7 +47,12 @@ function App({ offers }: AppTypeProps) {
             </PrivateRoute>
           }
           />
-          <Route path={AppRoute.Offer} element={<OfferPage />} />
+          <Route path={AppRoute.Offer} element={
+            <Layout>
+              <OfferPage />
+            </Layout>
+          }
+          />
           <Route path='*' element={<Page404 />} />
         </Routes>
       </BrowserRouter>
