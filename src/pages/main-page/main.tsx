@@ -32,7 +32,7 @@ function Main({ offers }: MainProps) {
   // console.log(activeOffer);
 
   return (
-    <>
+    <div className='page page--gray page--main'>
       <Helmet>
         <title>Главная страница предложения Шесть Городов</title>
       </Helmet>
@@ -74,7 +74,7 @@ function Main({ offers }: MainProps) {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 function OfferNotLoggedPage() {
   return (
-    <>
+    <div className="page">
       <Helmet>
         <title>Страница не залогинненого предложения</title>
       </Helmet>
@@ -262,7 +262,7 @@ function OfferNotLoggedPage() {
           </section>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

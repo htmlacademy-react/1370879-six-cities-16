@@ -21,24 +21,24 @@ function OfferPage() {
   const cityInfo = CITY_LOCATIONS.find((city) => city.name === currentOffer.city.name) as City;
 
   return (
-    <>
+    <div className="page">
       <Helmet>
         <title>Страница предложения</title>
       </Helmet>
-      <Header/>
+      <Header />
       <main className="page__main page__main--offer">
         <section className="offer">
           <div className="offer__gallery-container container">
-            <OfferGallery images={currentOffer.images}/>
+            <OfferGallery images={currentOffer.images} />
           </div>
           <OfferContainer offer={currentOffer} />
-          <Map city={cityInfo} baseClassName='offer'/>
+          <Map city={cityInfo} baseClassName='offer' />
           <div className="container">
             <NearPlaces />
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }
 
