@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-// import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
 import Sorting from '../../components/sorting/sorting';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
@@ -71,9 +70,6 @@ function MainPage({ offers }: MainProps) {
         </div>
       </main>
     </>
-    // <div className='page page--gray page--main'>
-
-  // </div>
   );
 }
 

@@ -14,7 +14,6 @@ type CityTabsProps = {
 }
 
 function CityTabsItem({ cityName, isActive, onClick }: CityTabsItemsProps) {
-  // console.log(isActive);
   const onClickHandler = () => {
     if (onClick) {
       onClick(cityName);

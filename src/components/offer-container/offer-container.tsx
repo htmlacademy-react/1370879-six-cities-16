@@ -1,7 +1,7 @@
 import { OfferType } from '../../types/offer';
 import FavoritesButton from '../favorite-button/favorites-button';
 import { getAdultsString, getBedroomsString, getMarkUpRanking, makeFirstLetterUppercase } from '../../utils';
-import ReviewsList from '../reviews-list/reviews-list';
+import ReviewsContainer from '../reviews-container/reviews-container';
 
 type OfferContainerType = {
   offer: OfferType;
@@ -77,7 +77,7 @@ function OfferContainer({ offer }: OfferContainerType) {
             </p>
           </div>
         </div>
-        <ReviewsList/>
+        <ReviewsContainer />
       </div>
     </div>
   );

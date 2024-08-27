@@ -10,6 +10,8 @@ function Counter() {
   // console.log(createTuple('1', 2, ['1', '2', '3']));
   const tuple = createTuple('3', 4, ['3', '4', '5']);
 
+  // console.log(tuple);
+
   return (
     <div className={styles.counter}>
       <h1>{counter.count}</h1>
