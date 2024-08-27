@@ -66,14 +66,23 @@ export const CITY_LOCATIONS: City[] = [
   },
 ];
 
-export enum AppRoute {
-  Main = '/',
-  Login = '/login',
-  Favorites = '/favorites',
-  Offer = '/offer/:id',
-  NotFound = '*',
-  Root = 'Root'
-}
+// export enum AppRoute {
+//   Main = '/',
+//   Login = '/login',
+//   Favorites = '/favorites',
+//   Offer = '/offer/:id',
+//   NotFound = '*',
+//   Root = 'Root'
+// }
+
+export const AppRoute = {
+  Main: '/',
+  Login: '/login',
+  Favorites: '/favorites',
+  Offer: '/offer/:id',
+  NotFound: '*',
+  Root: 'Root'
+} as const;
 
 export enum AuthorizationStatus {
   Auth = 'Auth',

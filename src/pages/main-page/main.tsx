@@ -18,8 +18,6 @@ function Main({ offers }: MainProps) {
   const [selectedCity, setSelectedCity] = useState('amsterdam');
   const isEmptyPage = offers.length === 0;
 
-  // console.log(selectedCity);
-
   const onHoverHandler = (offer?: OfferCardType) => {
     setActiveOffer(offer || null);
   };
@@ -29,7 +27,6 @@ function Main({ offers }: MainProps) {
   };
 
   const city: City = CITY_LOCATIONS.find((cityObj) => cityObj.id === selectedCity) as City;
-  // console.log(activeOffer);
 
   return (
     <div className='page page--gray page--main'>
