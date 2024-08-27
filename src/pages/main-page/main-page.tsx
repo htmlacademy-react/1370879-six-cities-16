@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../components/header/header';
+// import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
 import Sorting from '../../components/sorting/sorting';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
@@ -13,7 +13,7 @@ export type MainProps = {
   // onHover: () => void;
 }
 
-function Main({ offers }: MainProps) {
+function MainPage({ offers }: MainProps) {
   const [activeOffer, setActiveOffer] = useState<OfferCardType | null>(null);
   const [selectedCity, setSelectedCity] = useState('amsterdam');
   const isEmptyPage = offers.length === 0;
@@ -29,11 +29,10 @@ function Main({ offers }: MainProps) {
   const city: City = CITY_LOCATIONS.find((cityObj) => cityObj.id === selectedCity) as City;
 
   return (
-    <div className='page page--gray page--main'>
+    <>
       <Helmet>
         <title>Главная страница предложения Шесть Городов</title>
       </Helmet>
-      <Header />
       <main className={`page__main page__main--index ${isEmptyPage ? 'page__main--index-empty' : ''}`}>
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
@@ -71,8 +70,11 @@ function Main({ offers }: MainProps) {
           </div>
         </div>
       </main>
-    </div>
+    </>
+    // <div className='page page--gray page--main'>
+
+  // </div>
   );
 }
 
-export default Main;
+export default MainPage;

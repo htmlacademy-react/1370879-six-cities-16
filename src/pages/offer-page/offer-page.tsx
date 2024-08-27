@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Navigate, useParams } from 'react-router-dom';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
 import NearPlaces from '../../components/near-places/near-places';
-import Header from '../../components/header/header';
+// import Header from '../../components/header/header';
 import OfferContainer from '../../components/offer-container/offer-container';
 import Map from '../../components/map/map';
 import { AppRoute, CITY_LOCATIONS } from '../../const';
@@ -21,11 +21,10 @@ function OfferPage() {
   const cityInfo = CITY_LOCATIONS.find((city) => city.name === currentOffer.city.name) as City;
 
   return (
-    <div className="page">
+    <>
       <Helmet>
         <title>Страница предложения</title>
       </Helmet>
-      <Header />
       <main className="page__main page__main--offer">
         <section className="offer">
           <div className="offer__gallery-container container">
@@ -38,7 +37,7 @@ function OfferPage() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
