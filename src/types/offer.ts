@@ -12,8 +12,8 @@ export type LocationType = {
 
 export type City = {
   id: string;
-  location: LocationType;
   name: string;
+  location: LocationType;
 }
 
 export type OfferTemplateType = {

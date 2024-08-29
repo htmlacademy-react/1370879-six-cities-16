@@ -4,8 +4,9 @@ import OfferGallery from '../../components/offer-gallery/offer-gallery';
 import NearPlaces from '../../components/near-places/near-places';
 import OfferContainer from '../../components/offer-container/offer-container';
 import Map from '../../components/map/map';
-import { AppRoute, CITY_LOCATIONS } from '../../const';
+import { AppRoute } from '../../const';
 import { getCurrentOffer } from '../../utils';
+import { offers } from '../../mocks/offers/offers';
 import { City } from '../../types/offer';
 
 function OfferPage() {
@@ -17,7 +18,7 @@ function OfferPage() {
     return <Navigate to={AppRoute.NotFound} replace />;
   }
 
-  const cityInfo = CITY_LOCATIONS.find((city) => city.name === currentOffer.city.name) as City;
+  const cityInfo = offers.find((city) => city.city.name === currentOffer.city.name) as unknown as City;
 
   return (
     <>
