@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Navigate, useParams } from 'react-router-dom';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
-import NearPlaces from '../../components/near-places/near-places';
+// import NearPlaces from '../../components/near-places/near-places';
 import OfferContainer from '../../components/offer-container/offer-container';
 import Map from '../../components/map/map';
 import { AppRoute } from '../../const';
@@ -12,7 +12,11 @@ import { City } from '../../types/offer';
 function OfferPage() {
   const {id: offerId} = useParams();
 
+  // const MAX_NEAR_BY_OFFERS: number = 3;
+
   const currentOffer = getCurrentOffer(offerId);
+
+  // const nearByOffers = currentOffer.filter((offer: OfferCardType) => offer.id !== currentOffer?.id).slice(0, MAX_NEAR_BY_OFFERS);
 
   if (!currentOffer) {
     return <Navigate to={AppRoute.NotFound} replace />;
@@ -33,7 +37,7 @@ function OfferPage() {
           <OfferContainer offer={currentOffer} />
           <Map city={cityInfo} baseClassName='offer' />
           <div className="container">
-            <NearPlaces />
+            {/* <NearPlaces nearByOffers={nearByOffers}/> */}
           </div>
         </section>
       </main>
