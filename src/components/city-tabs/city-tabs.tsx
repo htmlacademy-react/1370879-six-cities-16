@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { City } from '../../types/offer';
+// import { OfferTemplateType } from '../../types/offer';
 
 type CityTabsItemsProps = {
   cityName: string;
@@ -14,7 +15,6 @@ type CityTabsProps = {
 }
 
 function CityTabsItem({ cityName, isActive, onClick }: CityTabsItemsProps) {
-  // console.log(isActive);
   const onClickHandler = () => {
     if (onClick) {
       onClick(cityName);
@@ -37,6 +37,7 @@ function CityTabsItem({ cityName, isActive, onClick }: CityTabsItemsProps) {
 }
 
 function CityTabs({ selectedCity, cities, onCityClick }: CityTabsProps) {
+  // console.log(cities);
   return (
     <ul className='locations__list tabs__list'>
       {cities.map((offer) => (
@@ -48,7 +49,6 @@ function CityTabs({ selectedCity, cities, onCityClick }: CityTabsProps) {
         />
       ))}
     </ul>
-
   );
 }
 

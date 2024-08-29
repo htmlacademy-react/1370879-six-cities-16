@@ -31,7 +31,6 @@ function Map({ baseClassName = 'cities', city, offers, activeOffer }: MapProps) 
 
   useEffect(() => {
     if (map) {
-      // console.log(map);
       map.setView([city?.location.latitude, city?.location.longitude], city?.location.zoom);
       markerLayer.current.addTo(map);
       markerLayer.current.clearLayers();

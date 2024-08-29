@@ -1,5 +1,3 @@
-// import { Helmet } from 'react-helmet-async';
-
 function MainEmptyPage() {
   return (
     <div className="cities">

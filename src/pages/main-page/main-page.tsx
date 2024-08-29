@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-// import Header from '../../components/header/header';
 import CityTabs from '../../components/city-tabs/city-tabs';
 import Sorting from '../../components/sorting/sorting';
 import OfferCardList from '../../components/offer-card-list/offer-card-list';
 import Map from '../../components/map/map';
-import { City, OfferCardType } from '../../types/offer';
+import { OfferCardType, City } from '../../types/offer';
 import { CITY_LOCATIONS } from '../../const';
 
 export type MainProps = {
@@ -26,7 +25,9 @@ function MainPage({ offers }: MainProps) {
     setSelectedCity(city);
   };
 
-  const city: City = CITY_LOCATIONS.find((cityObj) => cityObj.id === selectedCity) as City;
+  const city = CITY_LOCATIONS.find((cityObj) => cityObj.id === selectedCity) as City;
+
+  // console.log(typeof city);
 
   return (
     <>
@@ -71,9 +72,6 @@ function MainPage({ offers }: MainProps) {
         </div>
       </main>
     </>
-    // <div className='page page--gray page--main'>
-
-  // </div>
   );
 }
 

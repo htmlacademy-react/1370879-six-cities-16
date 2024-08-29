@@ -1,4 +1,6 @@
-export const comments = [
+import { Comment } from '../../types/comments';
+
+export const comments: Comment[] = [
   {
     id: 'fb106c38-c03f-4a76-b784-7b7da9c913c6',
     comment:
