@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { Provider } from 'react-redux';
+import { store } from '../../store';
 import FavoritesPage from '../../pages/favorites-page/favorites-page';
 import Login from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
@@ -20,43 +22,45 @@ type AppTypeProps = {
 
 function App({ offers }: AppTypeProps) {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path={AppRoute.Main}
-            element={
+    <Provider store={store}>
+      <HelmetProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path={AppRoute.Main}
+              element={
+                <Layout>
+                  <MainPage
+                    offers={offers}
+                  />
+                </Layout>
+              }
+            />
+            <Route path={AppRoute.Login} element={
+              <PublicRoute status={currentStatus}>
+                <Layout>
+                  <Login />
+                </Layout>
+              </PublicRoute>
+            }
+            />
+            <Route path={AppRoute.Favorites} element={
+              <PrivateRoute status={currentStatus}>
+                <FavoritesPage offers={offers} />
+              </PrivateRoute>
+            }
+            />
+            <Route path={AppRoute.Offer} element={
               <Layout>
-                <MainPage
-                  offers={offers}
-                />
+                <OfferPage />
               </Layout>
             }
-          />
-          <Route path={AppRoute.Login} element={
-            <PublicRoute status={currentStatus}>
-              <Layout>
-                <Login />
-              </Layout>
-            </PublicRoute>
-          }
-          />
-          <Route path={AppRoute.Favorites} element={
-            <PrivateRoute status={currentStatus}>
-              <FavoritesPage offers={offers}/>
-            </PrivateRoute>
-          }
-          />
-          <Route path={AppRoute.Offer} element={
-            <Layout>
-              <OfferPage />
-            </Layout>
-          }
-          />
-          <Route path='*' element={<Page404 />} />
-        </Routes>
-      </BrowserRouter>
-    </HelmetProvider>
+            />
+            <Route path='*' element={<Page404 />} />
+          </Routes>
+        </BrowserRouter>
+      </HelmetProvider>
+    </Provider>
   );
 }
 
