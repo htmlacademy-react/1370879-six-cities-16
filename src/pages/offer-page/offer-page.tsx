@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Navigate, useParams } from 'react-router-dom';
 import OfferGallery from '../../components/offer-gallery/offer-gallery';
-// import NearPlaces from '../../components/near-places/near-places';
+import NearPlaces from '../../components/near-places/near-places';
 import OfferContainer from '../../components/offer-container/offer-container';
 import Map from '../../components/map/map';
 import { AppRoute } from '../../const';
@@ -37,7 +37,7 @@ function OfferPage() {
           <OfferContainer offer={currentOffer} />
           <Map city={cityInfo} baseClassName='offer' />
           <div className="container">
-            {/* <NearPlaces nearByOffers={nearByOffers}/> */}
+            <NearPlaces />
           </div>
         </section>
       </main>

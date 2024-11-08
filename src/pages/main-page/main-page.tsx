@@ -14,7 +14,7 @@ export type MainProps = {
 
 function MainPage({ offers }: MainProps) {
   const [activeOffer, setActiveOffer] = useState<OfferCardType | null>(null);
-  const [selectedCity, setSelectedCity] = useState('amsterdam');
+  const [selectedCity, setSelectedCity] = useState('paris');
   const isEmptyPage = offers.length === 0;
 
   const onHoverHandler = (offer?: OfferCardType) => {
@@ -27,7 +27,7 @@ function MainPage({ offers }: MainProps) {
 
   const city = CITY_LOCATIONS.find((cityObj) => cityObj.id === selectedCity) as City;
 
-  // console.log(typeof city);
+  console.log(typeof city);
 
   return (
     <>
@@ -63,7 +63,7 @@ function MainPage({ offers }: MainProps) {
                   <Sorting />
                   <OfferCardList offers={offers} onHover={onHoverHandler} />
                 </section>
-                <div className="cities__right-section">
+                <div className="cities__right-section" style={{ backgroundColor: 'red' }}>
                   <Map city={city} offers={offers} activeOffer={activeOffer} />
                 </div>
               </>

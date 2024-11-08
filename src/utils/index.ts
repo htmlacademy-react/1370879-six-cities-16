@@ -8,7 +8,7 @@ type OffersByCityType = {
 
 export const getMarkUpRanking = (ranking: number) => {
   const rankingInPercent = `${(Math.floor(ranking) / 5) * 100}%`;
-  return {width: rankingInPercent};
+  return { width: rankingInPercent };
 };
 
 export const makeFirstLetterUppercase = (string: string) => `${string[0].toUpperCase()}${string.slice(1)}`;

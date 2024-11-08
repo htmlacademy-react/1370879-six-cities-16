@@ -44,8 +44,8 @@ function Map({ baseClassName = 'cities', city, offers, activeOffer }: MapProps) 
         if (offer.location) {
           leaflet.
             marker({
-              lat: offer.location.latitude,
-              lng: offer.location.longitude,
+              lat: offer?.location.latitude,
+              lng: offer?.location.longitude,
             }, {
               icon: activeOffer && activeOffer.id === offer.id ? currentCustomIcon : defaultCustomIcon,
             }).addTo(markerLayer.current);
@@ -57,7 +57,7 @@ function Map({ baseClassName = 'cities', city, offers, activeOffer }: MapProps) 
   return (
     <section
       className={`${baseClassName}__map map`}
-      style={{ height: '500px', backgroundColor: 'red'}}
+      style={{ height: '500px', backgroundColor: 'red' }}
       ref={mapRef}
     >
     </section>
