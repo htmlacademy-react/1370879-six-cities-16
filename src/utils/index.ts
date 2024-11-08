@@ -8,7 +8,7 @@ type OffersByCityType = {
 
 export const getMarkUpRanking = (ranking: number) => {
   const rankingInPercent = `${(Math.floor(ranking) / 5) * 100}%`;
-  return {width: rankingInPercent};
+  return { width: rankingInPercent };
 };
 
 export const makeFirstLetterUppercase = (string: string) => `${string[0].toUpperCase()}${string.slice(1)}`;
@@ -34,6 +34,6 @@ export const getOfferCardsByCity = (offerCards: OfferCardType[]) => {
 export const getBedroomsString = (count: number) => `${count} Bedroom${count > 1 ? 's' : ''}`;
 export const getAdultsString = (count: number) => `Max ${count} adult${count > 1 ? 's' : ''}`;
 
-// const current = getCurrentOffer('6af6f711-c28d-4121-82cd-e0b462a27f00');
+const current = getCurrentOffer('6af6f711-c28d-4121-82cd-e0b462a27f00');
 
-// console.log(current);
+console.log(current);
