@@ -9,7 +9,13 @@ export const store = configureStore({
   }
 });
 
-console.log(store.getState());
+// console.log(store.getState());
+// console.log(store.dispatch);
+
+store.subscribe(() => {
+  const state = store.getState();
+  localStorage.setItem('state', JSON.stringify(state));
+});
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

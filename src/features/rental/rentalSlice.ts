@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { OfferCardType } from "../../types/offer";
+
+export type SortOption = 'Popular' | 'PriceLowToHigh' | 'PriceHighToLow';
 
 export interface RentalState {
     currentCity: string,
-    offers: [],
-    sortOption: string
+    offers: OfferCardType[],
+    sortOption: SortOption
 }
 
 const initialState: RentalState = {
@@ -16,9 +19,15 @@ export const rentalSlice = createSlice({
     name: 'rental',
     initialState,
     reducers: {
-        setCurrentCity: (_state, _action) => { },
-        setOffers: (_state) => { },
-        setSortOption: (_state, _action) => { }
+        setCurrentCity: (state, action) => {
+            state.currentCity = action.payload;
+        },
+        setOffers: (state, action) => {
+            state.offers = action.payload;
+        },
+        setSortOption: (state, action) => {
+            state.sortOption = action.payload;
+        }
     }
 });
 
